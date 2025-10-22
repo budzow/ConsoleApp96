@@ -1,0 +1,1013 @@
+
+C:\Users\michal\source\repos\ConsoleApp96>dotnet tool uninstall --global dotnet-sonarscanner  
+Tool 'dotnet-sonarscanner' (version '10.3.0') was successfully uninstalled.
+
+C:\Users\michal\source\repos\ConsoleApp96>dotnet tool install --global dotnet-sonarscanner --version 10.3 
+You can invoke the tool using the following command: dotnet-sonarscanner
+Tool 'dotnet-sonarscanner' (version '10.3.0') was successfully installed.
+
+C:\Users\michal\source\repos\ConsoleApp96>dotnet sonarscanner begin /k:"ConsoleApp96" /d:sonar.host.url=http://l:20255 /d:sonar.cs.vscoveragexml.reportsPaths=coverage.xml /d:sonar.verbose=true 
+SonarScanner for MSBuild 10.3
+Using the .NET Core version of the Scanner for MSBuild
+Default properties file was found at C:\Users\michal\.dotnet\tools\.store\dotnet-sonarscanner\10.3.0\dotnet-sonarscanner\10.3.0\tools\netcoreapp3.1\any\SonarQube.Analysis.xml
+Loading analysis properties from C:\Users\michal\.dotnet\tools\.store\dotnet-sonarscanner\10.3.0\dotnet-sonarscanner\10.3.0\tools\netcoreapp3.1\any\SonarQube.Analysis.xml
+sonar.verbose=true was specified - setting the log verbosity to 'Debug'
+Pre-processing started.
+Preparing working directories...
+Using environment variables to determine the download directory...
+15:57:57.579  Loading analysis properties from C:\Users\michal\.dotnet\tools\.store\dotnet-sonarscanner\10.3.0\dotnet-sonarscanner\10.3.0\tools\netcoreapp3.1\any\SonarQube.Analysis.xml
+15:57:57.611  Server Url: http://l:20255
+15:57:57.611  Api Url: http://l:20255/api/v2
+15:57:57.612  Is SonarCloud: False
+15:57:57.626  No truststore provided; attempting to use the default location.
+15:57:57.631  No truststore found at the default location; proceeding without a truststore.
+15:57:57.634  sonar.verbose=true was specified - setting the log verbosity to 'Debug'
+15:57:57.639  Updating build integration targets...
+15:57:57.646  The file SonarQube.Integration.ImportBefore.targets is up to date at C:\Users\michal\AppData\Local\Microsoft\MSBuild\4.0\Microsoft.Common.targets\ImportBefore
+15:57:57.647  The file SonarQube.Integration.ImportBefore.targets is up to date at C:\Users\michal\AppData\Local\Microsoft\MSBuild\10.0\Microsoft.Common.targets\ImportBefore
+15:57:57.647  The file SonarQube.Integration.ImportBefore.targets is up to date at C:\Users\michal\AppData\Local\Microsoft\MSBuild\11.0\Microsoft.Common.targets\ImportBefore
+15:57:57.648  The file SonarQube.Integration.ImportBefore.targets is up to date at C:\Users\michal\AppData\Local\Microsoft\MSBuild\12.0\Microsoft.Common.targets\ImportBefore
+15:57:57.649  The file SonarQube.Integration.ImportBefore.targets is up to date at C:\Users\michal\AppData\Local\Microsoft\MSBuild\14.0\Microsoft.Common.targets\ImportBefore
+15:57:57.65  The file SonarQube.Integration.ImportBefore.targets is up to date at C:\Users\michal\AppData\Local\Microsoft\MSBuild\15.0\Microsoft.Common.targets\ImportBefore
+15:57:57.651  The file SonarQube.Integration.ImportBefore.targets is up to date at C:\Users\michal\AppData\Local\Microsoft\MSBuild\Current\Microsoft.Common.targets\ImportBefore
+15:57:57.656  Installed SonarQube.Integration.targets to C:\Users\michal\source\repos\ConsoleApp96\.sonarqube\bin\targets
+15:57:57.657  Creating config and output folders...
+15:57:57.659  Creating directory: C:\Users\michal\source\repos\ConsoleApp96\.sonarqube\conf
+15:57:57.66  Creating directory: C:\Users\michal\source\repos\ConsoleApp96\.sonarqube\out
+15:57:57.683  Downloading from http://l:20255/api/settings/values?component=unknown...
+15:57:57.835  Response received from http://l:20255/api/settings/values?component=unknown...
+15:57:57.837  Fetching server version...
+15:57:57.839  Downloading from http://l:20255/api/v2/analysis/version...
+15:57:57.844  Response received from http://l:20255/api/v2/analysis/version...
+15:57:57.846  Using SonarQube v2025.5.0.113872.
+15:57:57.847  Checking if the server version is supported...
+15:57:58.003  Checking validity of server license...
+15:57:58.004  Downloading from http://l:20255/api/editions/is_valid_license...
+15:57:58.041  Response received from http://l:20255/api/editions/is_valid_license...
+15:57:58.065  JreResolver: Resolving JRE path.
+15:57:58.068  Downloading from http://l:20255/api/v2/analysis/jres?os=windows&arch=x64...
+15:57:58.074  Response received from http://l:20255/api/v2/analysis/jres?os=windows&arch=x64...
+15:57:58.134  JreResolver: Cache hit 'C:\Users\michal\.sonar\cache\11a61a94d383e755b08b4e5890a13d148bc9f95b7149cbbeec62efb8c75a4a67\OpenJDK17U-jre_x64_windows_hotspot_17.0.13_11.zip_extracted\jdk-17.0.13+11-jre/bin/java.exe'.
+15:57:58.14  Fetching analysis configuration settings...
+15:57:58.143  Fetching properties for project 'ConsoleApp96'...
+15:57:58.144  Downloading from http://l:20255/api/settings/values?component=ConsoleApp96...
+15:57:58.153  Response received from http://l:20255/api/settings/values?component=ConsoleApp96...
+15:57:58.166  Downloading from http://l:20255/api/languages/list...
+15:57:58.169  Response received from http://l:20255/api/languages/list...
+15:57:58.171  Fetching quality profile for project 'ConsoleApp96'...
+15:57:58.171  Downloading from http://l:20255/api/qualityprofiles/search?project=ConsoleApp96...
+15:57:58.204  Response received from http://l:20255/api/qualityprofiles/search?project=ConsoleApp96...
+15:57:58.207  Fetching rules for quality profile 'b6ccab79-fc57-4976-9f3a-e199e4af57eb'...
+15:57:58.208  Downloading from http://l:20255/api/rules/search?f=repo,name,severity,lang,internalKey,templateKey,params,actives&ps=500&qprofile=b6ccab79-fc57-4976-9f3a-e199e4af57eb&p=1...
+15:57:58.391  Response received from http://l:20255/api/rules/search?f=repo,name,severity,lang,internalKey,templateKey,params,actives&ps=500&qprofile=b6ccab79-fc57-4976-9f3a-e199e4af57eb&p=1...
+15:57:58.413  Local analyzer cache: C:\Users\michal\AppData\Local\Temp\.sonarqube\resources
+15:57:58.415  Writing Roslyn generated ruleset to C:\Users\michal\source\repos\ConsoleApp96\.sonarqube\conf\Sonar-cs.ruleset...
+15:57:58.424  Writing Roslyn generated ruleset to C:\Users\michal\source\repos\ConsoleApp96\.sonarqube\conf\Sonar-cs-none.ruleset...
+15:57:58.429  Provisioning analyzer assemblies for cs...
+15:57:58.429  Installing required Roslyn analyzers...
+15:57:58.43  Processing plugin: securitycsharpfrontend version 11.10.0.40378
+15:57:58.435  Cache hit: using plugin files from C:\Users\michal\AppData\Local\Temp\.sonarqube\resources\34
+15:57:58.435  Processing plugin: csharpenterprise version 10.15.0.120848
+15:57:58.436  Cache hit: using plugin files from C:\Users\michal\AppData\Local\Temp\.sonarqube\resources\35
+15:57:58.439  Writing Roslyn analyzer additional file to C:\Users\michal\source\repos\ConsoleApp96\.sonarqube\conf\cs\SonarLint.xml...
+15:57:58.441  Fetching quality profile for project 'ConsoleApp96'...
+15:57:58.441  Downloading from http://l:20255/api/qualityprofiles/search?project=ConsoleApp96...
+15:57:58.471  Response received from http://l:20255/api/qualityprofiles/search?project=ConsoleApp96...
+15:57:58.473  Fetching rules for quality profile '0a7f180c-4754-41d1-b1f0-d8892e4ec69f'...
+15:57:58.473  Downloading from http://l:20255/api/rules/search?f=repo,name,severity,lang,internalKey,templateKey,params,actives&ps=500&qprofile=0a7f180c-4754-41d1-b1f0-d8892e4ec69f&p=1...
+15:57:58.559  Response received from http://l:20255/api/rules/search?f=repo,name,severity,lang,internalKey,templateKey,params,actives&ps=500&qprofile=0a7f180c-4754-41d1-b1f0-d8892e4ec69f&p=1...
+15:57:58.573  Local analyzer cache: C:\Users\michal\AppData\Local\Temp\.sonarqube\resources
+15:57:58.573  Writing Roslyn generated ruleset to C:\Users\michal\source\repos\ConsoleApp96\.sonarqube\conf\Sonar-vbnet.ruleset...
+15:57:58.576  Writing Roslyn generated ruleset to C:\Users\michal\source\repos\ConsoleApp96\.sonarqube\conf\Sonar-vbnet-none.ruleset...
+15:57:58.579  Provisioning analyzer assemblies for vbnet...
+15:57:58.579  Installing required Roslyn analyzers...
+15:57:58.579  Processing plugin: securityvbnetfrontend version 11.10.0.40378
+15:57:58.58  Cache hit: using plugin files from C:\Users\michal\AppData\Local\Temp\.sonarqube\resources\36
+15:57:58.58  Processing plugin: vbnetenterprise version 10.15.0.120848
+15:57:58.588  Cache hit: using plugin files from C:\Users\michal\AppData\Local\Temp\.sonarqube\resources\37
+15:57:58.59  Writing Roslyn analyzer additional file to C:\Users\michal\source\repos\ConsoleApp96\.sonarqube\conf\vbnet\SonarLint.xml...
+15:57:58.761  Processing analysis cache
+15:57:58.764  Incremental PR analysis: Base branch parameter was not provided.
+15:57:58.764  Cache data is empty. A full analysis will be performed.
+15:57:58.793  Pre-processing succeeded.
+
+C:\Users\michal\source\repos\ConsoleApp96>rem msbuild /t:rebuild -v:n 
+
+C:\Users\michal\source\repos\ConsoleApp96>rem dotnet build --no-incremental --verbosity d 
+
+C:\Users\michal\source\repos\ConsoleApp96>dotnet build 
+  Determining projects to restore...
+  Nothing to do. None of the projects specified contain packages to restore.
+C:\Users\michal\source\repos\ConsoleApp96\ConsoleApp96\appsettings.json(6,22): warning S2068: "password" detected here, make sure this is not a hard-coded credential. (https://rules.sonarsource.com/csharp/RSPEC-2068) [C:\Users\michal\source\repos\ConsoleApp96\ConsoleApp96\ConsoleApp96.csproj]
+C:\Users\michal\source\repos\ConsoleApp96\ConsoleApp96\Program.cs(9,20): warning S1118: Add a 'protected' constructor or the 'static' keyword to the class declaration. (https://rules.sonarsource.com/csharp/RSPEC-1118) [C:\Users\michal\source\repos\ConsoleApp96\ConsoleApp96\ConsoleApp96.csproj]
+C:\Users\michal\source\repos\ConsoleApp96\ConsoleApp96\Program.cs(11,21): warning S1186: Add a nested comment explaining why this method is empty, throw a 'NotSupportedException' or complete the implementation. (https://rules.sonarsource.com/csharp/RSPEC-1186) [C:\Users\michal\source\repos\ConsoleApp96\ConsoleApp96\ConsoleApp96.csproj]
+  ConsoleApp96 -> C:\Users\michal\source\repos\ConsoleApp96\ConsoleApp96\bin\Debug\ConsoleApp96.exe
+  Sonar: (ConsoleApp96.csproj) Project processed successfully
+
+Build succeeded.
+
+C:\Users\michal\source\repos\ConsoleApp96\ConsoleApp96\appsettings.json(6,22): warning S2068: "password" detected here, make sure this is not a hard-coded credential. (https://rules.sonarsource.com/csharp/RSPEC-2068) [C:\Users\michal\source\repos\ConsoleApp96\ConsoleApp96\ConsoleApp96.csproj]
+C:\Users\michal\source\repos\ConsoleApp96\ConsoleApp96\Program.cs(9,20): warning S1118: Add a 'protected' constructor or the 'static' keyword to the class declaration. (https://rules.sonarsource.com/csharp/RSPEC-1118) [C:\Users\michal\source\repos\ConsoleApp96\ConsoleApp96\ConsoleApp96.csproj]
+C:\Users\michal\source\repos\ConsoleApp96\ConsoleApp96\Program.cs(11,21): warning S1186: Add a nested comment explaining why this method is empty, throw a 'NotSupportedException' or complete the implementation. (https://rules.sonarsource.com/csharp/RSPEC-1186) [C:\Users\michal\source\repos\ConsoleApp96\ConsoleApp96\ConsoleApp96.csproj]
+    3 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:01.18
+
+Workload updates are available. Run `dotnet workload list` for more information.
+
+C:\Users\michal\source\repos\ConsoleApp96>dotnet-coverage collect "dotnet test" -f xml -o "coverage.xml" 
+dotnet-coverage v17.13.1.0 [win10-x64 - .NET 6.0.36]
+
+SessionId: e073f4c5-816e-4289-b55b-716a8c5c21fa
+  Determining projects to restore...
+  Nothing to do. None of the projects specified contain packages to restore.
+
+Workload updates are available. Run `dotnet workload list` for more information.
+No code coverage data available. Profiler was not initialized.
+Code coverage results: coverage.xml.
+
+C:\Users\michal\source\repos\ConsoleApp96>dotnet sonarscanner end 
+SonarScanner for MSBuild 10.3
+Using the .NET Core version of the Scanner for MSBuild
+Post-processing started.
+15:58:02.852  Uninstalling target: C:\Users\michal\source\repos\ConsoleApp96\.sonarqube\bin\targets\SonarQube.Integration.targets
+15:58:02.862  sonar.verbose=true was specified - setting the log verbosity to 'Debug'
+15:58:02.863  Loading the SonarQube analysis config from C:\Users\michal\source\repos\ConsoleApp96\.sonarqube\conf\SonarQubeAnalysisConfig.xml
+15:58:02.864  Not running under TeamBuild
+15:58:02.865  Analysis base directory: C:\Users\michal\source\repos\ConsoleApp96\.sonarqube
+Build directory: 
+Bin directory: C:\Users\michal\source\repos\ConsoleApp96\.sonarqube\bin
+Config directory: C:\Users\michal\source\repos\ConsoleApp96\.sonarqube\conf
+Output directory: C:\Users\michal\source\repos\ConsoleApp96\.sonarqube\out
+Config file: C:\Users\michal\source\repos\ConsoleApp96\.sonarqube\conf\SonarQubeAnalysisConfig.xml
+15:58:02.867  Generating SonarQube project properties file to C:\Users\michal\source\repos\ConsoleApp96\.sonarqube\out\sonar-project.properties
+15:58:02.888  Setting analysis property: sonar.visualstudio.enable=false
+15:58:02.915  The supplied Code Analysis ErrorLog file is a valid json file and does not need to be fixed: C:\Users\michal\source\repos\ConsoleApp96\.sonarqube\out\0\Issues.json
+15:58:02.922  Starting with Scanner for .NET v8 the way the `sonar.projectBaseDir` property is automatically detected has changed and this has an impact on the files that are analyzed and other properties that are resolved relative to it like `sonar.exclusions` and `sonar.test.exclusions`. If you would like to customize the behavior, please set the `sonar.projectBaseDir` property to point to a directory that contains all the source code you want to analyze. The path may be relative (to the directory from which the analysis was started) or absolute.
+15:58:02.923  Using working directory as project base directory: 'C:\Users\michal\source\repos\ConsoleApp96'.
+15:58:02.927  Reading directories from: 'C:\Users\michal\source\repos\ConsoleApp96'.
+15:58:02.931  Found 25 directories in: 'C:\Users\michal\source\repos\ConsoleApp96'.
+15:58:02.932  Reading files from: 'C:\Users\michal\source\repos\ConsoleApp96\.vs'.
+15:58:02.932  Found 0 files in: 'C:\Users\michal\source\repos\ConsoleApp96\.vs'.
+15:58:02.932  Reading files from: 'C:\Users\michal\source\repos\ConsoleApp96\ConsoleApp96'.
+15:58:02.933  Found 4 files in: 'C:\Users\michal\source\repos\ConsoleApp96\ConsoleApp96'.
+15:58:02.937  Reading files from: 'C:\Users\michal\source\repos\ConsoleApp96\.vs\ConsoleApp96'.
+15:58:02.937  Found 0 files in: 'C:\Users\michal\source\repos\ConsoleApp96\.vs\ConsoleApp96'.
+15:58:02.937  Reading files from: 'C:\Users\michal\source\repos\ConsoleApp96\ConsoleApp96\bin'.
+15:58:02.937  Found 0 files in: 'C:\Users\michal\source\repos\ConsoleApp96\ConsoleApp96\bin'.
+15:58:02.938  Reading files from: 'C:\Users\michal\source\repos\ConsoleApp96\ConsoleApp96\obj'.
+15:58:02.938  Found 0 files in: 'C:\Users\michal\source\repos\ConsoleApp96\ConsoleApp96\obj'.
+15:58:02.938  Reading files from: 'C:\Users\michal\source\repos\ConsoleApp96\ConsoleApp96\Properties'.
+15:58:02.939  Found 1 files in: 'C:\Users\michal\source\repos\ConsoleApp96\ConsoleApp96\Properties'.
+15:58:02.939  Reading files from: 'C:\Users\michal\source\repos\ConsoleApp96\.vs\ConsoleApp96\CopilotIndices'.
+15:58:02.939  Found 0 files in: 'C:\Users\michal\source\repos\ConsoleApp96\.vs\ConsoleApp96\CopilotIndices'.
+15:58:02.939  Reading files from: 'C:\Users\michal\source\repos\ConsoleApp96\.vs\ConsoleApp96\FileContentIndex'.
+15:58:02.94  Found 2 files in: 'C:\Users\michal\source\repos\ConsoleApp96\.vs\ConsoleApp96\FileContentIndex'.
+15:58:02.94  Reading files from: 'C:\Users\michal\source\repos\ConsoleApp96\.vs\ConsoleApp96\v17'.
+15:58:02.941  Found 3 files in: 'C:\Users\michal\source\repos\ConsoleApp96\.vs\ConsoleApp96\v17'.
+15:58:02.942  Reading files from: 'C:\Users\michal\source\repos\ConsoleApp96\ConsoleApp96\bin\Debug'.
+15:58:02.942  Found 3 files in: 'C:\Users\michal\source\repos\ConsoleApp96\ConsoleApp96\bin\Debug'.
+15:58:02.943  Reading files from: 'C:\Users\michal\source\repos\ConsoleApp96\ConsoleApp96\obj\Debug'.
+15:58:02.943  Found 7 files in: 'C:\Users\michal\source\repos\ConsoleApp96\ConsoleApp96\obj\Debug'.
+15:58:02.944  Reading files from: 'C:\Users\michal\source\repos\ConsoleApp96\.vs\ConsoleApp96\CopilotIndices\17.12.31.40377'.
+15:58:02.945  Found 2 files in: 'C:\Users\michal\source\repos\ConsoleApp96\.vs\ConsoleApp96\CopilotIndices\17.12.31.40377'.
+15:58:02.945  Reading files from: 'C:\Users\michal\source\repos\ConsoleApp96\ConsoleApp96\obj\Debug\TempPE'.
+15:58:02.946  Found 0 files in: 'C:\Users\michal\source\repos\ConsoleApp96\ConsoleApp96\obj\Debug\TempPE'.
+15:58:02.946  Reading files from: 'C:\Users\michal\source\repos\ConsoleApp96'.
+15:58:02.946  Found 4 files in: 'C:\Users\michal\source\repos\ConsoleApp96'.
+15:58:02.968  Dumping content of sonar-project.properties
+------------------------------------------------------------------------
+sonar.projectKey=ConsoleApp96
+sonar.working.directory=C:\\Users\\michal\\source\\repos\\ConsoleApp96\\.sonarqube\\out\\.sonar
+sonar.projectBaseDir=C:\\Users\\michal\\source\\repos\\ConsoleApp96
+sonar.pullrequest.cache.basepath=C:\\Users\\michal\\source\\repos\\ConsoleApp96
+sonar.sources=\
+"C:\\Users\\michal\\source\\repos\\ConsoleApp96\\.vs\\ConsoleApp96\\v17\\DocumentLayout.backup.json",\
+"C:\\Users\\michal\\source\\repos\\ConsoleApp96\\.vs\\ConsoleApp96\\v17\\DocumentLayout.json"
+
+F4255C01-A965-45A4-B0F6-B4A5550D0108.sonar.projectKey=ConsoleApp96:F4255C01-A965-45A4-B0F6-B4A5550D0108
+F4255C01-A965-45A4-B0F6-B4A5550D0108.sonar.projectName=ConsoleApp96
+F4255C01-A965-45A4-B0F6-B4A5550D0108.sonar.projectBaseDir=C:\\Users\\michal\\source\\repos\\ConsoleApp96\\ConsoleApp96
+F4255C01-A965-45A4-B0F6-B4A5550D0108.sonar.sourceEncoding=utf-8
+F4255C01-A965-45A4-B0F6-B4A5550D0108.sonar.tests=
+F4255C01-A965-45A4-B0F6-B4A5550D0108.sonar.sources=\
+"C:\\Users\\michal\\source\\repos\\ConsoleApp96\\ConsoleApp96\\Program.cs",\
+"C:\\Users\\michal\\source\\repos\\ConsoleApp96\\ConsoleApp96\\Properties\\AssemblyInfo.cs",\
+"C:\\Users\\michal\\source\\repos\\ConsoleApp96\\ConsoleApp96\\App.config",\
+"C:\\Users\\michal\\source\\repos\\ConsoleApp96\\ConsoleApp96\\appsettings.json",\
+"C:\\Users\\michal\\source\\repos\\ConsoleApp96\\ConsoleApp96\\bin\\Debug\\ConsoleApp96.exe.config"
+
+F4255C01-A965-45A4-B0F6-B4A5550D0108.sonar.cs.analyzer.projectOutPaths=\
+"C:\\Users\\michal\\source\\repos\\ConsoleApp96\\.sonarqube\\out\\0"
+F4255C01-A965-45A4-B0F6-B4A5550D0108.sonar.cs.roslyn.reportFilePaths=\
+"C:\\Users\\michal\\source\\repos\\ConsoleApp96\\.sonarqube\\out\\0\\Issues.json"
+F4255C01-A965-45A4-B0F6-B4A5550D0108.sonar.cs.scanner.telemetry=\
+"C:\\Users\\michal\\source\\repos\\ConsoleApp96\\.sonarqube\\out\\0\\Telemetry.json"
+
+F4255C01-A965-45A4-B0F6-B4A5550D0108.sonar.working.directory=C:\\Users\\michal\\source\\repos\\ConsoleApp96\\.sonarqube\\out\\.sonar\\mod0
+sonar.host.url=http://l:20255
+sonar.cs.vscoveragexml.reportsPaths=coverage.xml
+sonar.exclusions=coverage.xml
+sonar.visualstudio.enable=false
+
+sonar.modules=F4255C01-A965-45A4-B0F6-B4A5550D0108
+
+
+------------------------------------------------------------------------
+15:58:02.972  Writing processing summary to C:\Users\michal\source\repos\ConsoleApp96\.sonarqube\out\ProjectInfo.log
+Setting the JAVA_HOME for the scanner cli to C:\Users\michal\.sonar\cache\11a61a94d383e755b08b4e5890a13d148bc9f95b7149cbbeec62efb8c75a4a67\OpenJDK17U-jre_x64_windows_hotspot_17.0.13_11.zip_extracted\jdk-17.0.13+11-jre.
+Calling the SonarScanner CLI...
+Overwriting the value of environment variable 'JAVA_HOME'. Old value: C:\Program Files\Java\jdk-17, new value: C:\Users\michal\.sonar\cache\11a61a94d383e755b08b4e5890a13d148bc9f95b7149cbbeec62efb8c75a4a67\OpenJDK17U-jre_x64_windows_hotspot_17.0.13_11.zip_extracted\jdk-17.0.13+11-jre
+Setting environment variable 'SONAR_SCANNER_OPTS'. Value: -D<sensitive data removed>
+Executing file C:\Users\michal\.dotnet\tools\.store\dotnet-sonarscanner\10.3.0\dotnet-sonarscanner\10.3.0\tools\netcoreapp3.1\any\sonar-scanner-5.0.2.4997\bin\sonar-scanner.bat
+  Args: -Dproject.settings=C:\Users\michal\source\repos\ConsoleApp96\.sonarqube\out\sonar-project.properties --from=ScannerMSBuild/10.3 --debug -Dsonar.scanAllFiles=true 
+  Working directory: C:\Users\michal\source\repos\ConsoleApp96
+  Timeout (ms):-1
+  Process id: 47560
+15:58:03.478 INFO: Scanner configuration file: C:\Users\michal\.dotnet\tools\.store\dotnet-sonarscanner\10.3.0\dotnet-sonarscanner\10.3.0\tools\netcoreapp3.1\any\sonar-scanner-5.0.2.4997\bin\..\conf\sonar-scanner.properties
+15:58:03.490 INFO: Project root configuration file: C:\Users\michal\source\repos\ConsoleApp96\.sonarqube\out\sonar-project.properties
+15:58:03.514 INFO: SonarScanner 5.0.2.4997
+15:58:03.514 INFO: Java 17.0.13 Eclipse Adoptium (64-bit)
+15:58:03.514 INFO: Windows 11 10.0 amd64
+15:58:03.516 INFO: SONAR_SCANNER_OPTS=-D<sensitive data removed>
+15:58:03.642 DEBUG: keyStore is : 
+15:58:03.642 DEBUG: keyStore type is : pkcs12
+15:58:03.642 DEBUG: keyStore provider is : 
+15:58:03.642 DEBUG: init keystore
+15:58:03.642 DEBUG: init keymanager of type SunX509
+15:58:03.934 DEBUG: Create: C:\Users\michal\.sonar\cache
+15:58:03.935 INFO: User cache: C:\Users\michal\.sonar\cache
+15:58:03.935 DEBUG: Create: C:\Users\michal\.sonar\cache\_tmp
+15:58:03.938 DEBUG: Extract sonar-scanner-api-batch in temp...
+15:58:03.945 DEBUG: Get bootstrap index...
+15:58:03.946 DEBUG: Download: http://l:20255/batch/index
+15:58:03.998 DEBUG: Get bootstrap completed
+15:58:04.000 DEBUG: Create isolated classloader...
+15:58:04.009 DEBUG: Start temp cleaning...
+15:58:04.016 DEBUG: Temp cleaning done
+15:58:04.016 DEBUG: Execution getVersion
+15:58:04.037 INFO: Analyzing on SonarQube server 2025.5.0.113872
+15:58:04.038 INFO: Default locale: "en_US", source code encoding: "windows-1252" (analysis is platform dependent)
+15:58:04.038 DEBUG: Work directory: C:\Users\michal\source\repos\ConsoleApp96\.sonarqube\out\.sonar
+15:58:04.039 DEBUG: Execution execute
+15:58:04.226 DEBUG: JVM max available memory: 15 GB
+15:58:04.319 DEBUG: Data Center 2025.5.0.113872
+15:58:04.459 DEBUG: Sonar User Home: C:\Users\michal\.sonar
+15:58:04.478 DEBUG: Loading OS trusted SSL certificates...
+15:58:04.478 DEBUG: This operation might be slow or even get stuck. You can skip it by passing the scanner property 'sonar.scanner.skipSystemTruststore=true'
+15:58:04.656 DEBUG: Successfully loaded KeyStore of the type [Windows-ROOT] having [58] entries
+15:58:04.658 DEBUG: Failed to load KeyStore of the type [Windows-ROOT-LOCALMACHINE]
+15:58:04.720 DEBUG: Successfully loaded KeyStore of the type [Windows-ROOT-CURRENTUSER] having [58] entries
+15:58:04.867 DEBUG: Successfully loaded KeyStore of the type [Windows-MY] having [2] entries
+15:58:04.969 DEBUG: Successfully loaded KeyStore of the type [Windows-MY-CURRENTUSER] having [2] entries
+15:58:04.970 DEBUG: Failed to load KeyStore of the type [Windows-MY-LOCALMACHINE]
+15:58:04.972 DEBUG: Loaded [120] system trusted certificates
+15:58:05.079 INFO: Load global settings
+15:58:05.089 DEBUG: --> GET http://l:20255/api/settings/values.protobuf
+15:58:05.113 DEBUG: <-- 200 http://l:20255/api/settings/values.protobuf (24ms, unknown-length body)
+15:58:05.147 INFO: Load global settings (done) | time=68ms
+15:58:05.163 INFO: Server id: 75DD49DE-AZlDSO3hZDmJ-_YyXV75
+15:58:05.166 DEBUG: User cache: C:\Users\michal\.sonar\cache
+15:58:05.171 INFO: Loading required plugins
+15:58:05.171 INFO: Load plugins index
+15:58:05.171 DEBUG: --> GET http://l:20255/api/plugins/installed
+15:58:05.177 DEBUG: <-- 200 http://l:20255/api/plugins/installed (5ms, unknown-length body)
+15:58:05.211 INFO: Load plugins index (done) | time=40ms
+15:58:05.212 INFO: Load/download plugins
+15:58:05.276 INFO: Load/download plugins (done) | time=63ms
+15:58:05.276 DEBUG: Plugins not loaded because they are optional: [abap, sonarapex, architecture, architecturejavascriptfrontend, architecturejavafrontend, csharpenterprise, cpp, cfamilydependencies, cobol, dart, dbd, dbdjavafrontend, dbdpythonfrontend, flex, go, web, jcl, javasymbolicexecution, java, javascript, kotlin, php, pli, plsql, python, rpg, ruby, rust, sonarscala, jasmin, swift, tsql, vbnetenterprise, vb, security, securitycsharpfrontend, securitygofrontend, securityjsfrontend, securityjavafrontend, securitykotlinfrontend, securityphpfrontend, securitypythonfrontend, securityvbnetfrontend, xml]
+15:58:05.316 DEBUG: Plugins loaded:
+15:58:05.316 DEBUG:   * Text Code Quality and Security 2.29.0.8107 (textenterprise)
+15:58:05.316 DEBUG:   * JaCoCo 1.3.0.1538 (jacoco)
+15:58:05.316 DEBUG:   * IaC Code Quality and Security 1.50.0.16452 (iacenterprise)
+15:58:05.316 DEBUG:   * IaC Code Quality and Security 1.50.0.16452 (iac)
+15:58:05.316 DEBUG:   * Clean as You Code 2.4.0.2018 (cayc)
+15:58:05.353 INFO: Loaded core extensions: developer-scanner, server-common
+15:58:05.364 DEBUG: Installed core extension: developer-scanner
+15:58:05.365 DEBUG: Installed core extension: server-common
+15:58:05.490 DEBUG: register org.eclipse.jgit.util.FS$FileStoreAttributes$$Lambda$461/0x0000028ede2c5a68@7965a51c with shutdown hook
+15:58:05.668 INFO: Process project properties
+15:58:05.704 INFO: Process project properties (done) | time=36ms
+15:58:05.734 INFO: Project key: ConsoleApp96
+15:58:05.734 INFO: Base dir: C:\Users\michal\source\repos\ConsoleApp96
+15:58:05.734 INFO: Working dir: C:\Users\michal\source\repos\ConsoleApp96\.sonarqube\out\.sonar
+15:58:05.734 DEBUG: Project global encoding: windows-1252, default locale: en_US
+15:58:05.745 INFO: Load project settings for component key: 'ConsoleApp96'
+15:58:05.748 DEBUG: --> GET http://l:20255/api/settings/values.protobuf?component=ConsoleApp96
+15:58:05.756 DEBUG: <-- 200 http://l:20255/api/settings/values.protobuf?component=ConsoleApp96 (7ms, unknown-length body)
+15:58:05.758 INFO: Load project settings for component key: 'ConsoleApp96' (done) | time=13ms
+15:58:05.780 INFO: Load project branches
+15:58:05.780 DEBUG: --> GET http://l:20255/api/project_branches/list?project=ConsoleApp96
+15:58:05.786 DEBUG: <-- 200 http://l:20255/api/project_branches/list?project=ConsoleApp96 (5ms, unknown-length body)
+15:58:05.788 INFO: Load project branches (done) | time=8ms
+15:58:05.789 INFO: Load branch configuration
+15:58:05.789 INFO: Load branch configuration (done) | time=0ms
+15:58:05.796 DEBUG: Creating module hierarchy
+15:58:05.796 DEBUG:   Init module 'ConsoleApp96'
+15:58:05.798 DEBUG:     Base dir: C:\Users\michal\source\repos\ConsoleApp96
+15:58:05.798 DEBUG:     Working dir: C:\Users\michal\source\repos\ConsoleApp96\.sonarqube\out\.sonar
+15:58:05.799 DEBUG:     Module global encoding: windows-1252, default locale: en_US
+15:58:05.799 DEBUG:   Init module 'ConsoleApp96'
+15:58:05.801 DEBUG:     Base dir: C:\Users\michal\source\repos\ConsoleApp96\ConsoleApp96
+15:58:05.801 DEBUG:     Working dir: C:\Users\michal\source\repos\ConsoleApp96\.sonarqube\out\.sonar\mod0
+15:58:05.801 DEBUG:     Module global encoding: UTF-8, default locale: en_US
+15:58:05.810 INFO: Load quality profiles
+15:58:05.810 DEBUG: --> GET http://l:20255/api/qualityprofiles/search.protobuf?project=ConsoleApp96
+15:58:05.828 DEBUG: <-- 200 http://l:20255/api/qualityprofiles/search.protobuf?project=ConsoleApp96 (17ms, 5488-byte body)
+15:58:05.843 INFO: Load quality profiles (done) | time=34ms
+15:58:05.869 WARN: SCM provider autodetection failed. Please use "sonar.scm.provider" to define SCM of your project, or disable the SCM Sensor in the project settings.
+15:58:05.874 INFO: Load active rules
+15:58:05.874 DEBUG: --> GET http://l:20255/api/v2/analysis/active_rules?projectKey=ConsoleApp96
+15:58:06.003 DEBUG: <-- 200 http://l:20255/api/v2/analysis/active_rules?projectKey=ConsoleApp96 (128ms, unknown-length body)
+15:58:06.205 INFO: Load active rules (done) | time=331ms
+15:58:06.214 INFO: Load analysis cache
+15:58:06.215 DEBUG: --> GET http://l:20255/api/analysis_cache/get?project=ConsoleApp96
+15:58:06.221 DEBUG: <-- 200 http://l:20255/api/analysis_cache/get?project=ConsoleApp96 (6ms, 142-byte body)
+15:58:06.256 INFO: Load analysis cache (142 bytes) | time=42ms
+15:58:06.298 DEBUG: --> GET http://l:20255/api/languages/list
+15:58:06.301 DEBUG: <-- 200 http://l:20255/api/languages/list (2ms, unknown-length body)
+15:58:06.318 DEBUG: --> GET http://l:20255/api/features/list
+15:58:06.361 DEBUG: <-- 200 http://l:20255/api/features/list (43ms, unknown-length body)
+15:58:06.396 DEBUG: Declared patterns of language Kubernetes were converted to sonar.lang.patterns.kubernetes : 
+15:58:06.397 DEBUG: Declared patterns of language CSS were converted to sonar.lang.patterns.css : **/*.css,**/*.less,**/*.scss,**/*.sass
+15:58:06.397 DEBUG: Declared patterns of language Scala were converted to sonar.lang.patterns.scala : **/*.scala
+15:58:06.397 DEBUG: Declared patterns of language JSP were converted to sonar.lang.patterns.jsp : **/*.jsp,**/*.jspf,**/*.jspx
+15:58:06.398 DEBUG: Declared patterns of language JavaScript were converted to sonar.lang.patterns.js : **/*.js,**/*.jsx,**/*.cjs,**/*.mjs,**/*.vue
+15:58:06.398 DEBUG: Declared patterns of language Python were converted to sonar.lang.patterns.py : **/*.py
+15:58:06.398 DEBUG: Declared patterns of language Ansible were converted to sonar.lang.patterns.ansible : 
+15:58:06.398 DEBUG: Declared patterns of language Apex were converted to sonar.lang.patterns.apex : **/*.cls,**/*.trigger
+15:58:06.399 DEBUG: Declared patterns of language Docker were converted to sonar.lang.patterns.docker : **/Dockerfile,**/*.dockerfile
+15:58:06.399 DEBUG: Declared patterns of language PL/SQL were converted to sonar.lang.patterns.plsql : **/*.sql,**/*.pks,**/*.pkb
+15:58:06.399 DEBUG: Declared patterns of language Dart were converted to sonar.lang.patterns.dart : **/*.dart
+15:58:06.399 DEBUG: Declared patterns of language Rust were converted to sonar.lang.patterns.rust : **/*.rs
+15:58:06.399 DEBUG: Declared patterns of language JCL were converted to sonar.lang.patterns.jcl : **/*.jcl
+15:58:06.400 DEBUG: Declared patterns of language Java were converted to sonar.lang.patterns.java : **/*.java,**/*.jav
+15:58:06.400 DEBUG: Declared patterns of language HTML were converted to sonar.lang.patterns.web : **/*.html,**/*.xhtml,**/*.cshtml,**/*.vbhtml,**/*.aspx,**/*.ascx,**/*.rhtml,**/*.erb,**/*.shtm,**/*.shtml,**/*.cmp,**/*.twig
+15:58:06.400 DEBUG: Declared patterns of language Flex were converted to sonar.lang.patterns.flex : **/*.as
+15:58:06.400 DEBUG: Declared patterns of language XML were converted to sonar.lang.patterns.xml : **/*.xml,**/*.xsd,**/*.xsl,**/*.config
+15:58:06.401 DEBUG: Declared patterns of language JSON were converted to sonar.lang.patterns.json : **/*.json
+15:58:06.401 DEBUG: Declared patterns of language IPython Notebooks were converted to sonar.lang.patterns.ipynb : **/*.ipynb
+15:58:06.401 DEBUG: Declared patterns of language Text were converted to sonar.lang.patterns.text : 
+15:58:06.401 DEBUG: Declared patterns of language VB.NET were converted to sonar.lang.patterns.vbnet : **/*.vb
+15:58:06.401 DEBUG: Declared patterns of language CloudFormation were converted to sonar.lang.patterns.cloudformation : 
+15:58:06.401 DEBUG: Declared patterns of language Swift were converted to sonar.lang.patterns.swift : **/*.swift
+15:58:06.402 DEBUG: Declared patterns of language YAML were converted to sonar.lang.patterns.yaml : **/*.yaml,**/*.yml
+15:58:06.403 DEBUG: Declared patterns of language C++ were converted to sonar.lang.patterns.cpp : **/*.cc,**/*.cpp,**/*.cxx,**/*.c++,**/*.hh,**/*.hpp,**/*.hxx,**/*.h++,**/*.ipp,**/*.ixx,**/*.mxx,**/*.cppm,**/*.ccm,**/*.cxxm,**/*.c++m
+15:58:06.404 DEBUG: Declared patterns of language C were converted to sonar.lang.patterns.c : **/*.c,**/*.h
+15:58:06.405 DEBUG: Declared patterns of language Go were converted to sonar.lang.patterns.go : **/*.go
+15:58:06.405 DEBUG: Declared patterns of language Kotlin were converted to sonar.lang.patterns.kotlin : **/*.kt,**/*.kts
+15:58:06.405 DEBUG: Declared patterns of language RPG were converted to sonar.lang.patterns.rpg : **/*.rpg,**/*.rpgle,**/*.sqlrpgle,**/*.rpg,**/*.rpgle,**/*.sqlrpgle
+15:58:06.405 DEBUG: Declared patterns of language PL/I were converted to sonar.lang.patterns.pli : **/*.pli
+15:58:06.406 DEBUG: Declared patterns of language T-SQL were converted to sonar.lang.patterns.tsql : **/*.tsql
+15:58:06.406 DEBUG: Declared patterns of language Vb were converted to sonar.lang.patterns.vb : **/*.bas,**/*.frm,**/*.ctl
+15:58:06.406 DEBUG: Declared patterns of language Secrets were converted to sonar.lang.patterns.secrets : 
+15:58:06.406 DEBUG: Declared patterns of language Ruby were converted to sonar.lang.patterns.ruby : **/*.rb
+15:58:06.407 DEBUG: Declared patterns of language C# were converted to sonar.lang.patterns.cs : **/*.cs,**/*.razor
+15:58:06.407 DEBUG: Declared patterns of language COBOL were converted to sonar.lang.patterns.cobol : **/*.cbl
+15:58:06.408 DEBUG: Declared patterns of language PHP were converted to sonar.lang.patterns.php : **/*.php,**/*.php3,**/*.php4,**/*.php5,**/*.phtml,**/*.inc
+15:58:06.408 DEBUG: Declared patterns of language Terraform were converted to sonar.lang.patterns.terraform : **/*.tf
+15:58:06.409 DEBUG: Declared patterns of language Azure Resource Manager were converted to sonar.lang.patterns.azureresourcemanager : **/*.bicep
+15:58:06.409 DEBUG: Declared patterns of language ABAP were converted to sonar.lang.patterns.abap : **/*.abap,**/*.ab4,**/*.flow,**/*.asprog
+15:58:06.410 DEBUG: Declared patterns of language GitHub Actions were converted to sonar.lang.patterns.githubactions : 
+15:58:06.410 DEBUG: Declared patterns of language Objective-C were converted to sonar.lang.patterns.objc : **/*.m
+15:58:06.411 DEBUG: Declared patterns of language TypeScript were converted to sonar.lang.patterns.ts : **/*.ts,**/*.tsx,**/*.cts,**/*.mts
+15:58:06.426 INFO: Preprocessing files...
+15:58:06.473 INFO: 3 languages detected in 7 preprocessed files (done) | time=45ms
+15:58:06.474 INFO: 0 files ignored because of inclusion/exclusion patterns
+15:58:06.478 INFO: Loading plugins for detected languages
+15:58:06.478 DEBUG: Detected languages: [cs, xml, json]
+15:58:06.479 INFO: Load/download plugins
+15:58:06.516 INFO: Load/download plugins (done) | time=37ms
+15:58:06.517 DEBUG: Optional language-specific plugins not loaded: [abap, sonarapex, architecturejavascriptfrontend, architecturejavafrontend, cpp, cfamilydependencies, cobol, dart, dbd, dbdjavafrontend, dbdpythonfrontend, flex, go, web, jcl, javasymbolicexecution, java, javascript, kotlin, php, pli, plsql, python, rpg, ruby, rust, sonarscala, jasmin, swift, tsql, vbnetenterprise, vb, securitygofrontend, securityjsfrontend, securityjavafrontend, securitykotlinfrontend, securityphpfrontend, securitypythonfrontend, securityvbnetfrontend]
+15:58:06.558 DEBUG: Plugins loaded:
+15:58:06.558 DEBUG:   * C# Code Quality and Security 10.15.0.120848 (csharpenterprise)
+15:58:06.558 DEBUG:   * Vulnerability Analysis 11.10.0.40378 (security)
+15:58:06.558 DEBUG:   * XML Code Quality and Security 2.13.0.5938 (xml)
+15:58:06.558 DEBUG:   * Architecture Analysis 2.3.0.6597 (architecture)
+15:58:06.558 DEBUG:   * Vulnerability Rules for C# 11.10.0.40378 (securitycsharpfrontend)
+15:58:06.747 INFO: Executing phase 2 project builders
+15:58:06.748 DEBUG: Execute project builder: org.sonarsource.dotnet.shared.plugins.GlobalProtobufFileProcessor
+15:58:06.759 DEBUG: Processing C:\Users\michal\source\repos\ConsoleApp96\.sonarqube\out\0\output-cs\file-metadata.pb
+15:58:06.804 INFO: Executing phase 2 project builders (done) | time=57ms
+15:58:06.811 INFO: Load project repositories
+15:58:06.813 DEBUG: --> GET http://l:20255/batch/project.protobuf?key=ConsoleApp96
+15:58:06.818 DEBUG: <-- 200 http://l:20255/batch/project.protobuf?key=ConsoleApp96 (5ms, 360-byte body)
+15:58:06.901 INFO: Load project repositories (done) | time=90ms
+15:58:06.907 DEBUG: Will ignore generated code
+15:58:06.915 DEBUG: Available languages:
+15:58:06.915 DEBUG:   * C# => "cs"
+15:58:06.915 DEBUG:   * XML => "xml"
+15:58:06.916 DEBUG:   * Secrets => "secrets"
+15:58:06.916 DEBUG:   * Text => "text"
+15:58:06.916 DEBUG:   * Ansible => "ansible"
+15:58:06.916 DEBUG:   * GitHub Actions => "githubactions"
+15:58:06.916 DEBUG:   * Terraform => "terraform"
+15:58:06.916 DEBUG:   * CloudFormation => "cloudformation"
+15:58:06.916 DEBUG:   * Kubernetes => "kubernetes"
+15:58:06.916 DEBUG:   * Docker => "docker"
+15:58:06.916 DEBUG:   * Azure Resource Manager => "azureresourcemanager"
+15:58:06.916 DEBUG:   * YAML => "yaml"
+15:58:06.916 DEBUG:   * JSON => "json"
+15:58:06.918 INFO: Indexing files...
+15:58:06.919 INFO: Project configuration:
+15:58:06.920 INFO:   Excluded sources: coverage.xml
+15:58:06.921 INFO: Indexing files of module 'ConsoleApp96'
+15:58:06.921 INFO:   Base dir: C:\Users\michal\source\repos\ConsoleApp96\ConsoleApp96
+15:58:06.922 DEBUG:   Source paths: Program.cs, Properties/AssemblyInfo.cs, App.config, appsettings.json, bin/Debug/ConsoleApp96.exe.config
+15:58:06.922 INFO:   Excluded sources: coverage.xml
+15:58:06.932 DEBUG: 'ConsoleApp96/Program.cs' generated metadata with charset 'UTF-8'
+15:58:06.937 DEBUG: 'ConsoleApp96/Program.cs' indexed with language 'cs'
+15:58:06.944 DEBUG: 'ConsoleApp96/Properties/AssemblyInfo.cs' generated metadata with charset 'UTF-8'
+15:58:06.945 DEBUG: 'ConsoleApp96/Properties/AssemblyInfo.cs' indexed with language 'cs'
+15:58:06.945 DEBUG: 'ConsoleApp96/App.config' indexed with language 'xml'
+15:58:06.946 DEBUG: 'ConsoleApp96/appsettings.json' indexed with language 'json'
+15:58:06.947 DEBUG: 'ConsoleApp96/bin/Debug/ConsoleApp96.exe.config' indexed with language 'xml'
+15:58:06.949 INFO: Indexing files of module 'ConsoleApp96'
+15:58:06.949 INFO:   Base dir: C:\Users\michal\source\repos\ConsoleApp96
+15:58:06.949 DEBUG:   Source paths: .vs/ConsoleApp96/v17/DocumentLayout.backup.json, .vs/ConsoleApp96/v17/DocumentLayout.json
+15:58:06.949 INFO:   Excluded sources: coverage.xml
+15:58:06.950 DEBUG: '.vs/ConsoleApp96/v17/DocumentLayout.backup.json' indexed with language 'json'
+15:58:06.950 DEBUG: '.vs/ConsoleApp96/v17/DocumentLayout.json' indexed with language 'json'
+15:58:06.950 INFO: 7 files indexed (done) | time=31ms
+15:58:06.951 INFO: Quality profile for cs: Sonar way
+15:58:06.951 INFO: Quality profile for json: Sonar way
+15:58:06.951 INFO: Quality profile for xml: Sonar way
+15:58:06.951 INFO: ------------- Run sensors on module ConsoleApp96
+15:58:07.015 INFO: Load metrics repository
+15:58:07.017 DEBUG: --> GET http://l:20255/api/metrics/search?ps=500&p=1
+15:58:07.024 DEBUG: <-- 200 http://l:20255/api/metrics/search?ps=500&p=1 (6ms, unknown-length body)
+15:58:07.034 INFO: Load metrics repository (done) | time=19ms
+15:58:07.625 DEBUG: 'Import external issues report' skipped because of missing configuration requirements.
+Accessed configuration:
+- sonar.externalIssuesReportPaths: <empty>
+15:58:07.631 DEBUG: 'IaC Ansible Sensor' skipped because there is no related file in current project
+15:58:07.632 DEBUG: 'IaC ansible-lint report Sensor' skipped because there is no related file in current project
+15:58:07.632 DEBUG: 'IaC Terraform Sensor' skipped because there is no related file in current project
+15:58:07.633 DEBUG: 'IaC TFLint report Sensor' skipped because there is no related file in current project
+15:58:07.633 DEBUG: 'IaC Kubernetes Sensor' skipped because there is no related file in current project
+15:58:07.635 DEBUG: 'IaC YAML Sensor' skipped because there is no related file in current project
+15:58:07.635 DEBUG: Sensors : C# Project Type Information -> C# Analysis Log -> C# Method Declarations -> C# Telemetry -> C# Telemetry Json -> C# Properties -> XML Sensor -> JaCoCo XML Report Importer -> IaC GitHub Actions Sensor -> IaC CloudFormation Sensor -> IaC cfn-lint report Sensor -> IaC Docker Sensor -> IaC hadolint report Sensor -> IaC Azure Resource Manager Sensor -> Java Config Sensor -> IaC JSON Sensor -> Serverless configuration file sensor -> AWS SAM template file sensor -> AWS SAM Inline template file sensor
+15:58:07.637 INFO: Sensor C# Project Type Information [csharpenterprise]
+15:58:07.641 DEBUG: Adding file type information (has MAIN 'true', has TEST 'false') for project 'ConsoleApp96' (project key 'ConsoleApp96:ConsoleApp96:F4255C01-A965-45A4-B0F6-B4A5550D0108', base dir 'C:\Users\michal\source\repos\ConsoleApp96\ConsoleApp96'). For debug info, see ProjectInfo.xml in 'C:\Users\michal\source\repos\ConsoleApp96\.sonarqube\out\0'.
+15:58:07.641 INFO: Sensor C# Project Type Information [csharpenterprise] (done) | time=4ms
+15:58:07.641 INFO: Sensor C# Analysis Log [csharpenterprise]
+15:58:07.647 DEBUG: Project 'ConsoleApp96:ConsoleApp96:F4255C01-A965-45A4-B0F6-B4A5550D0108': Analyzer working directory 'C:\Users\michal\source\repos\ConsoleApp96\.sonarqube\out\0\output-cs' contains 8 .pb file(s)
+15:58:07.652 INFO: Roslyn version: 4.12.0.0
+15:58:07.652 INFO: Language version: CSharp7_3
+15:58:07.652 INFO: Concurrent execution: enabled
+15:58:07.652 DEBUG: File 'C:\Users\michal\source\repos\ConsoleApp96\ConsoleApp96\obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs' was recognized as generated
+15:58:07.653 INFO: Sensor C# Analysis Log [csharpenterprise] (done) | time=11ms
+15:58:07.653 INFO: Sensor C# Method Declarations [csharpenterprise]
+15:58:07.653 DEBUG: Start importing method declarations.
+15:58:07.654 DEBUG: Project 'ConsoleApp96:ConsoleApp96:F4255C01-A965-45A4-B0F6-B4A5550D0108': Analyzer working directory 'C:\Users\michal\source\repos\ConsoleApp96\.sonarqube\out\0\output-cs' contains 8 .pb file(s)
+15:58:07.655 INFO: Sensor C# Method Declarations [csharpenterprise] (done) | time=2ms
+15:58:07.655 INFO: Sensor C# Telemetry [csharpenterprise]
+15:58:07.655 DEBUG: Start importing metrics.
+15:58:07.659 DEBUG: Project 'ConsoleApp96:ConsoleApp96:F4255C01-A965-45A4-B0F6-B4A5550D0108': Analyzer working directory 'C:\Users\michal\source\repos\ConsoleApp96\.sonarqube\out\0\output-cs' contains 8 .pb file(s)
+15:58:07.661 INFO: Sensor C# Telemetry [csharpenterprise] (done) | time=6ms
+15:58:07.661 INFO: Sensor C# Telemetry Json [csharpenterprise]
+15:58:07.685 INFO: Sensor C# Telemetry Json [csharpenterprise] (done) | time=24ms
+15:58:07.685 INFO: Sensor C# Properties [csharpenterprise]
+15:58:07.686 DEBUG: Project 'ConsoleApp96:ConsoleApp96:F4255C01-A965-45A4-B0F6-B4A5550D0108': Analyzer working directory 'C:\Users\michal\source\repos\ConsoleApp96\.sonarqube\out\0\output-cs' contains 8 .pb file(s)
+15:58:07.687 DEBUG: Project 'ConsoleApp96:ConsoleApp96:F4255C01-A965-45A4-B0F6-B4A5550D0108': The Roslyn JSON report path has 'C:\Users\michal\source\repos\ConsoleApp96\.sonarqube\out\0\Issues.json'
+15:58:07.687 INFO: Sensor C# Properties [csharpenterprise] (done) | time=2ms
+15:58:07.687 INFO: Sensor XML Sensor [xml]
+15:58:07.693 INFO: 2 source files to be analyzed
+15:58:07.696 DEBUG: 'ConsoleApp96/bin/Debug/ConsoleApp96.exe.config' generated metadata with charset 'UTF-8'
+15:58:07.777 DEBUG: Count lines in file:///C:/Users/michal/source/repos/ConsoleApp96/ConsoleApp96/bin/Debug/ConsoleApp96.exe.config
+15:58:07.825 DEBUG: 'ConsoleApp96/App.config' generated metadata with charset 'UTF-8'
+15:58:07.828 DEBUG: Count lines in file:///C:/Users/michal/source/repos/ConsoleApp96/ConsoleApp96/App.config
+15:58:07.849 INFO: 2/2 source files have been analyzed
+15:58:07.849 INFO: Sensor XML Sensor [xml] (done) | time=162ms
+15:58:07.849 INFO: Sensor JaCoCo XML Report Importer [jacoco]
+15:58:07.850 INFO: 'sonar.coverage.jacoco.xmlReportPaths' is not defined. Using default locations: target/site/jacoco/jacoco.xml,target/site/jacoco-it/jacoco.xml,build/reports/jacoco/test/jacocoTestReport.xml
+15:58:07.853 INFO: No report imported, no coverage information will be imported by JaCoCo XML Report Importer
+15:58:07.853 INFO: Sensor JaCoCo XML Report Importer [jacoco] (done) | time=4ms
+15:58:07.853 INFO: Sensor IaC GitHub Actions Sensor [iacenterprise]
+15:58:07.853 DEBUG: Sensor IaC GitHub Actions Sensor is allowed to analyze hidden files
+15:58:07.856 INFO: There are no files to be analyzed for the GitHub Actions language
+15:58:07.856 INFO: Sensor IaC GitHub Actions Sensor [iacenterprise] (done) | time=3ms
+15:58:07.856 INFO: Sensor IaC CloudFormation Sensor [iac]
+15:58:07.861 DEBUG: 'ConsoleApp96/appsettings.json' generated metadata with charset 'UTF-8'
+15:58:07.861 INFO: There are no files to be analyzed for the CloudFormation language
+15:58:07.862 INFO: Sensor IaC CloudFormation Sensor [iac] (done) | time=6ms
+15:58:07.862 INFO: Sensor IaC cfn-lint report Sensor [iac]
+15:58:07.863 INFO: Sensor IaC cfn-lint report Sensor [iac] (done) | time=1ms
+15:58:07.863 INFO: Sensor IaC Docker Sensor [iac]
+15:58:07.864 INFO: There are no files to be analyzed for the Docker language
+15:58:07.864 INFO: Sensor IaC Docker Sensor [iac] (done) | time=1ms
+15:58:07.864 INFO: Sensor IaC hadolint report Sensor [iac]
+15:58:07.864 INFO: Sensor IaC hadolint report Sensor [iac] (done) | time=0ms
+15:58:07.864 INFO: Sensor IaC Azure Resource Manager Sensor [iac]
+15:58:07.866 INFO: There are no files to be analyzed for the Azure Resource Manager language
+15:58:07.866 INFO: Sensor IaC Azure Resource Manager Sensor [iac] (done) | time=2ms
+15:58:07.866 INFO: Sensor Java Config Sensor [iac]
+15:58:07.870 INFO: There are no files to be analyzed for the Java language
+15:58:07.871 INFO: Sensor Java Config Sensor [iac] (done) | time=5ms
+15:58:07.871 INFO: Sensor IaC JSON Sensor [iacenterprise]
+15:58:07.872 DEBUG: Sensor for language "JSON" is disabled
+15:58:07.872 INFO: Sensor IaC JSON Sensor [iacenterprise] (done) | time=1ms
+15:58:07.872 INFO: Sensor Serverless configuration file sensor [security]
+15:58:07.873 INFO: 0 Serverless function entries were found in the project
+15:58:07.876 INFO: 0 Serverless function handlers were kept as entrypoints
+15:58:07.876 INFO: Sensor Serverless configuration file sensor [security] (done) | time=4ms
+15:58:07.876 INFO: Sensor AWS SAM template file sensor [security]
+15:58:07.876 DEBUG: 0 SAM template configuration files were found in the project. 0 SAM function entries were found in total. 0 were kept as potential entrypoints.
+15:58:07.876 INFO: Sensor AWS SAM template file sensor [security] (done) | time=0ms
+15:58:07.876 INFO: Sensor AWS SAM Inline template file sensor [security]
+15:58:07.877 DEBUG: 0 SAM Inline template configuration files were found in the project. 0 SAM Inline function entries were found in total. 0 were kept as potential entrypoints.
+15:58:07.877 INFO: Sensor AWS SAM Inline template file sensor [security] (done) | time=1ms
+15:58:07.880 INFO: ------------- Run sensors on module ConsoleApp96
+15:58:07.932 DEBUG: 'Import external issues report' skipped because of missing configuration requirements.
+Accessed configuration:
+- sonar.externalIssuesReportPaths: <empty>
+15:58:07.932 DEBUG: 'C# Telemetry' skipped because there is no related file in current project
+15:58:07.933 DEBUG: 'C# Telemetry Json' skipped because there is no related file in current project
+15:58:07.933 DEBUG: 'XML Sensor' skipped because there is no related file in current project
+15:58:07.933 DEBUG: 'IaC Ansible Sensor' skipped because there is no related file in current project
+15:58:07.933 DEBUG: 'IaC ansible-lint report Sensor' skipped because there is no related file in current project
+15:58:07.934 DEBUG: 'IaC Terraform Sensor' skipped because there is no related file in current project
+15:58:07.934 DEBUG: 'IaC TFLint report Sensor' skipped because there is no related file in current project
+15:58:07.934 DEBUG: 'IaC Kubernetes Sensor' skipped because there is no related file in current project
+15:58:07.934 DEBUG: 'IaC YAML Sensor' skipped because there is no related file in current project
+15:58:07.936 DEBUG: 'Generic Test Executions Report' skipped because of missing configuration requirements.
+Accessed configuration:
+- sonar.testExecutionReportPaths: <empty>
+- sonar.externalIssuesReportPaths: <empty>
+15:58:07.937 DEBUG: Sensors : C# Project Type Information -> C# Analysis Log -> C# Method Declarations -> C# Properties -> JaCoCo XML Report Importer -> IaC GitHub Actions Sensor -> IaC CloudFormation Sensor -> IaC cfn-lint report Sensor -> IaC Docker Sensor -> IaC hadolint report Sensor -> IaC Azure Resource Manager Sensor -> Java Config Sensor -> IaC JSON Sensor -> Serverless configuration file sensor -> AWS SAM template file sensor -> AWS SAM Inline template file sensor -> EnterpriseTextAndSecretsSensor -> JavaSecuritySensor -> CSharpSecuritySensor -> VbNetSecuritySensor -> PhpSecuritySensor -> PythonSecuritySensor -> JsSecuritySensor -> KotlinSecuritySensor -> GoSecuritySensor
+15:58:07.937 INFO: Sensor C# Project Type Information [csharpenterprise]
+15:58:07.937 INFO: Sensor C# Project Type Information [csharpenterprise] (done) | time=0ms
+15:58:07.937 INFO: Sensor C# Analysis Log [csharpenterprise]
+15:58:07.938 DEBUG: Project 'ConsoleApp96': Property missing: 'sonar.cs.analyzer.projectOutPaths'. No protobuf files will be loaded for this project.
+15:58:07.938 INFO: Sensor C# Analysis Log [csharpenterprise] (done) | time=1ms
+15:58:07.938 INFO: Sensor C# Method Declarations [csharpenterprise]
+15:58:07.938 DEBUG: Start importing method declarations.
+15:58:07.938 DEBUG: Project 'ConsoleApp96': Property missing: 'sonar.cs.analyzer.projectOutPaths'. No protobuf files will be loaded for this project.
+15:58:07.938 INFO: Sensor C# Method Declarations [csharpenterprise] (done) | time=0ms
+15:58:07.938 INFO: Sensor C# Properties [csharpenterprise]
+15:58:07.938 DEBUG: Project 'ConsoleApp96': Property missing: 'sonar.cs.analyzer.projectOutPaths'. No protobuf files will be loaded for this project.
+15:58:07.938 DEBUG: Project 'ConsoleApp96': No Roslyn issues reports have been found.
+15:58:07.938 INFO: Sensor C# Properties [csharpenterprise] (done) | time=0ms
+15:58:07.938 INFO: Sensor JaCoCo XML Report Importer [jacoco]
+15:58:07.938 INFO: 'sonar.coverage.jacoco.xmlReportPaths' is not defined. Using default locations: target/site/jacoco/jacoco.xml,target/site/jacoco-it/jacoco.xml,build/reports/jacoco/test/jacocoTestReport.xml
+15:58:07.939 INFO: No report imported, no coverage information will be imported by JaCoCo XML Report Importer
+15:58:07.939 INFO: Sensor JaCoCo XML Report Importer [jacoco] (done) | time=1ms
+15:58:07.939 INFO: Sensor IaC GitHub Actions Sensor [iacenterprise]
+15:58:07.939 DEBUG: Sensor IaC GitHub Actions Sensor is allowed to analyze hidden files
+15:58:07.939 INFO: There are no files to be analyzed for the GitHub Actions language
+15:58:07.939 INFO: Sensor IaC GitHub Actions Sensor [iacenterprise] (done) | time=0ms
+15:58:07.939 INFO: Sensor IaC CloudFormation Sensor [iac]
+15:58:07.944 DEBUG: '.vs/ConsoleApp96/v17/DocumentLayout.json' generated metadata with charset 'windows-1252'
+15:58:07.948 DEBUG: '.vs/ConsoleApp96/v17/DocumentLayout.backup.json' generated metadata with charset 'windows-1252'
+15:58:07.949 INFO: There are no files to be analyzed for the CloudFormation language
+15:58:07.949 INFO: Sensor IaC CloudFormation Sensor [iac] (done) | time=10ms
+15:58:07.949 INFO: Sensor IaC cfn-lint report Sensor [iac]
+15:58:07.949 INFO: Sensor IaC cfn-lint report Sensor [iac] (done) | time=0ms
+15:58:07.949 INFO: Sensor IaC Docker Sensor [iac]
+15:58:07.950 INFO: There are no files to be analyzed for the Docker language
+15:58:07.950 INFO: Sensor IaC Docker Sensor [iac] (done) | time=1ms
+15:58:07.950 INFO: Sensor IaC hadolint report Sensor [iac]
+15:58:07.950 INFO: Sensor IaC hadolint report Sensor [iac] (done) | time=0ms
+15:58:07.950 INFO: Sensor IaC Azure Resource Manager Sensor [iac]
+15:58:07.951 INFO: There are no files to be analyzed for the Azure Resource Manager language
+15:58:07.952 INFO: Sensor IaC Azure Resource Manager Sensor [iac] (done) | time=2ms
+15:58:07.952 INFO: Sensor Java Config Sensor [iac]
+15:58:07.952 INFO: There are no files to be analyzed for the Java language
+15:58:07.952 INFO: Sensor Java Config Sensor [iac] (done) | time=0ms
+15:58:07.952 INFO: Sensor IaC JSON Sensor [iacenterprise]
+15:58:07.952 DEBUG: Sensor for language "JSON" is disabled
+15:58:07.952 INFO: Sensor IaC JSON Sensor [iacenterprise] (done) | time=0ms
+15:58:07.952 INFO: Sensor Serverless configuration file sensor [security]
+15:58:07.952 INFO: 0 Serverless function entries were found in the project
+15:58:07.953 INFO: 0 Serverless function handlers were kept as entrypoints
+15:58:07.953 INFO: Sensor Serverless configuration file sensor [security] (done) | time=1ms
+15:58:07.953 INFO: Sensor AWS SAM template file sensor [security]
+15:58:07.953 DEBUG: 0 SAM template configuration files were found in the project. 0 SAM function entries were found in total. 0 were kept as potential entrypoints.
+15:58:07.953 INFO: Sensor AWS SAM template file sensor [security] (done) | time=0ms
+15:58:07.953 INFO: Sensor AWS SAM Inline template file sensor [security]
+15:58:07.953 DEBUG: 0 SAM Inline template configuration files were found in the project. 0 SAM Inline function entries were found in total. 0 were kept as potential entrypoints.
+15:58:07.953 INFO: Sensor AWS SAM Inline template file sensor [security] (done) | time=0ms
+15:58:07.953 INFO: Sensor EnterpriseTextAndSecretsSensor [textenterprise]
+15:58:07.953 DEBUG: Sensor EnterpriseTextAndSecretsSensor is allowed to analyze hidden files
+15:58:07.973 INFO: Available processors: 22
+15:58:07.973 INFO: Using 22 threads for analysis.
+15:58:07.975 DEBUG: Initializing SecretsStateContainer with specification loader.
+15:58:08.970 INFO: The property "sonar.tests" is not set. To improve the analysis accuracy, we categorize a file as a test file if any of the following is true:
+  * The filename starts with "test"
+  * The filename contains "test." or "tests."
+  * Any directory in the file path is named: "doc", "docs", "test" or "tests"
+  * Any directory in the file path has a name ending in "test" or "tests"
+
+15:58:09.041 DEBUG: Initializing ChecksContainer with checks and trie construction.
+15:58:09.062 DEBUG: ChecksContainer initialized successfully with 15 checks without pre-filter and trie containing 431 patterns.
+15:58:09.065 INFO: Start fetching files for the text and secrets analysis
+15:58:09.116 DEBUG: Read the "C:\WINDOWS\System32\where.exe $PATH:git.exe" stdout in thread "pool-4-thread-1"
+15:58:09.257 DEBUG: Found git.exe at C:\Program Files\Git\cmd\git.exe
+15:58:09.275 DEBUG: Read the "C:\Program Files\Git\cmd\git.exe --version" stdout in thread "pool-4-thread-1"
+15:58:09.429 DEBUG: git --version returned: git version 2.47.0.windows.2
+15:58:09.442 INFO: Using Git CLI to retrieve untracked files
+15:58:09.469 DEBUG: Read the "C:\Program Files\Git\cmd\git.exe -C C:\Users\michal\source\repos\ConsoleApp96 status --untracked-files=all --porcelain" stdout in thread "pool-4-thread-1"
+15:58:09.632 DEBUG: Process [C:\Program Files\Git\cmd\git.exe, -C, C:\Users\michal\source\repos\ConsoleApp96, status, --untracked-files=all, --porcelain] exited with code 128
+15:58:09.633 DEBUG: Unable to retrieve git status
+15:58:09.633 WARN: Retrieving only language associated files, make sure to run the analysis inside a git repository to make use of inclusions specified via "sonar.text.inclusions"
+15:58:09.634 INFO: Starting the text and secrets analysis
+15:58:09.636 INFO: 7 source files to be analyzed for the text and secrets analysis
+15:58:09.677 INFO: 7/7 source files have been analyzed for the text and secrets analysis
+15:58:09.677 DEBUG: Analyzed files for the text and secrets analysis: 7
+15:58:09.680 DEBUG: Unable to retrieve git status
+15:58:09.682 INFO: Start fetching files for the binary file analysis
+15:58:09.683 INFO: There are no files to be analyzed for the binary file analysis
+15:58:09.685 INFO: Sensor EnterpriseTextAndSecretsSensor [textenterprise] (done) | time=1732ms
+15:58:09.685 INFO: Sensor JavaSecuritySensor [security]
+15:58:09.699 INFO: 29 taint analysis rules enabled.
+15:58:09.700 DEBUG: Enabled taint analysis rules: S2076, S2078, S2083, S2091, S2631, S3649, S5131, S5135, S5144, S5145, S5146, S5147, S5334, S5496, S5883, S6096, S6173, S6287, S6350, S6384, S6390, S6398, S6399, S6547, S6549, S7044, S7518, S7606, S7610
+15:58:09.702 DEBUG: Load type hierarchy and UCFGs: Starting
+15:58:09.702 DEBUG: Load type hierarchy: Starting
+15:58:09.702 DEBUG: Reading type hierarchy from: C:\Users\michal\source\repos\ConsoleApp96\.sonarqube\out\.sonar\ucfg2\java
+15:58:09.703 DEBUG: Read 0 type definitions
+15:58:09.706 DEBUG: Load type hierarchy: Time spent was 00:00:00.003
+15:58:09.706 DEBUG: Load UCFGs: Starting
+15:58:09.706 DEBUG: Reading UCFGs from: C:\Users\michal\source\repos\ConsoleApp96\.sonarqube\out\.sonar\ucfg2\java
+15:58:09.707 DEBUG: UCFG directory does not exist, no UCFGs will be loaded.
+15:58:09.707 DEBUG: Load UCFGs: Time spent was 00:00:00.000
+15:58:09.707 DEBUG: Load type hierarchy and UCFGs: Time spent was 00:00:00.005
+15:58:09.707 INFO: No UCFGs have been included for analysis.
+15:58:09.709 DEBUG: java security sensor: Time spent was 00:00:00.016
+15:58:09.710 INFO: java security sensor: Begin: 2025-10-22T13:58:09.693576500Z, End: 2025-10-22T13:58:09.709906900Z, Duration: 00:00:00.016
+  Load type hierarchy and UCFGs: Begin: 2025-10-22T13:58:09.702905900Z, End: 2025-10-22T13:58:09.707907Z, Duration: 00:00:00.005
+    Load type hierarchy: Begin: 2025-10-22T13:58:09.702905900Z, End: 2025-10-22T13:58:09.705906800Z, Duration: 00:00:00.003
+    Load UCFGs: Begin: 2025-10-22T13:58:09.706914100Z, End: 2025-10-22T13:58:09.707907Z, Duration: 00:00:00.000
+15:58:09.710 INFO: java security sensor peak memory: 198 MB
+15:58:09.710 DEBUG: Debug information:
+15:58:09.711 INFO: Sensor JavaSecuritySensor [security] (done) | time=26ms
+15:58:09.711 INFO: Sensor CSharpSecuritySensor [security]
+15:58:09.712 INFO: 27 taint analysis rules enabled.
+15:58:09.712 DEBUG: Enabled taint analysis rules: S2076, S2078, S2083, S2091, S2631, S3649, S5131, S5135, S5144, S5145, S5146, S5147, S5334, S5883, S6096, S6173, S6287, S6350, S6399, S6547, S6549, S6639, S6641, S6680, S6776, S7044, S7714
+15:58:09.712 DEBUG: Load type hierarchy and UCFGs: Starting
+15:58:09.712 DEBUG: Load type hierarchy: Starting
+15:58:09.712 DEBUG: Reading type hierarchy from: C:\Users\michal\source\repos\ConsoleApp96\.sonarqube\out\ucfg2\cs
+15:58:09.736 DEBUG: Read 1 type definitions
+15:58:09.737 DEBUG: Load type hierarchy: Time spent was 00:00:00.024
+15:58:09.737 DEBUG: Load UCFGs: Starting
+15:58:09.738 DEBUG: Reading UCFGs from: C:\Users\michal\source\repos\ConsoleApp96\.sonarqube\out\ucfg2\cs
+15:58:09.779 DEBUG: Loaded 2 ucfgs from 1 files(s) in [C:\Users\michal\source\repos\ConsoleApp96\.sonarqube\out\ucfg2\cs]
+15:58:09.781 DEBUG: Load UCFGs: Time spent was 00:00:00.042
+15:58:09.781 DEBUG: Load type hierarchy and UCFGs: Time spent was 00:00:00.068
+15:58:09.781 INFO: Analyzing 2 UCFGs to detect vulnerabilities.
+15:58:09.781 DEBUG: Check cache: Starting
+15:58:09.781 DEBUG: Load cache: Starting
+15:58:09.781 DEBUG: Load cache: Time spent was 00:00:00.000
+15:58:09.781 DEBUG: Check cache: Time spent was 00:00:00.000
+15:58:09.781 DEBUG: Create runtime call graph: Starting
+15:58:09.782 DEBUG: Variable Type Analysis #1: Starting
+15:58:09.782 DEBUG: Create runtime type propagation graph: Starting
+15:58:09.784 DEBUG: Create runtime type propagation graph: Time spent was 00:00:00.002
+15:58:09.784 DEBUG: Run SCC (Tarjan) on 0 nodes: Starting
+15:58:09.784 DEBUG: Run SCC (Tarjan) on 0 nodes: Time spent was 00:00:00.000
+15:58:09.784 DEBUG: Tarjan found 0 strongly connected components
+15:58:09.785 DEBUG: Propagate runtime types to strongly connected components: Starting
+15:58:09.785 DEBUG: Propagate runtime types to strongly connected components: Time spent was 00:00:00.001
+15:58:09.785 DEBUG: Variable Type Analysis #1: Time spent was 00:00:00.003
+15:58:09.785 DEBUG: Variable Type Analysis #2: Starting
+15:58:09.785 DEBUG: Create runtime type propagation graph: Starting
+15:58:09.785 DEBUG: Create runtime type propagation graph: Time spent was 00:00:00.000
+15:58:09.785 DEBUG: Run SCC (Tarjan) on 0 nodes: Starting
+15:58:09.785 DEBUG: Run SCC (Tarjan) on 0 nodes: Time spent was 00:00:00.000
+15:58:09.785 DEBUG: Tarjan found 0 strongly connected components
+15:58:09.785 DEBUG: Propagate runtime types to strongly connected components: Starting
+15:58:09.785 DEBUG: Propagate runtime types to strongly connected components: Time spent was 00:00:00.000
+15:58:09.785 DEBUG: Variable Type Analysis #2: Time spent was 00:00:00.000
+15:58:09.786 DEBUG: Create runtime call graph: Time spent was 00:00:00.004
+15:58:09.786 DEBUG: Load config: Starting
+15:58:09.793 DEBUG: Refreshing resources in /config/roslyn.sonaranalyzer.security.cs/sources/
+15:58:09.990 DEBUG: Refreshing resources in /config/roslyn.sonaranalyzer.security.cs-autogenerated/sources/
+15:58:10.012 DEBUG: Loaded 93 sources.
+15:58:10.015 DEBUG: Refreshing resources in /config/roslyn.sonaranalyzer.security.cs/sanitizers/
+15:58:10.041 DEBUG: Loaded 103 sanitizers.
+15:58:10.042 DEBUG: Refreshing resources in /config/roslyn.sonaranalyzer.security.cs/validators/
+15:58:10.063 DEBUG: Loaded 74 validators.
+15:58:10.064 DEBUG: Refreshing resources in /config/roslyn.sonaranalyzer.security.cs/passthroughs/
+15:58:10.087 DEBUG: Refreshing resources in /config/roslyn.sonaranalyzer.security.cs-autogenerated/passthroughs/
+15:58:10.109 DEBUG: Loaded 1447 passthroughs.
+15:58:10.111 DEBUG: Loaded 0 collectionHandlers.
+15:58:10.113 DEBUG: Refreshing resources in /config/roslyn.sonaranalyzer.security.cs/sinks/
+15:58:10.160 DEBUG: Refreshing resources in /config/roslyn.sonaranalyzer.security.cs-autogenerated/sinks/
+15:58:10.182 DEBUG: Loaded 1569 sinks.
+15:58:10.183 DEBUG: Refreshing resources in /config/roslyn.sonaranalyzer.security.cs/encoders/
+15:58:10.196 DEBUG: Loaded 3 encoders.
+15:58:10.197 DEBUG: Refreshing resources in /config/roslyn.sonaranalyzer.security.cs/decoders/
+15:58:10.210 DEBUG: Loaded 4 decoders.
+15:58:10.210 DEBUG: Resource file /config/roslyn.sonaranalyzer.security.cs-autogenerated/safe.txt not found, skipping safe method IDs population.
+15:58:10.211 DEBUG: Loaded 0 safe method ids.
+15:58:10.223 DEBUG: Load config: Time spent was 00:00:00.437
+15:58:10.223 DEBUG: Compute entry points: Starting
+15:58:10.236 DEBUG: Compute entry points: Time spent was 00:00:00.013
+15:58:10.236 INFO: No entry points found.
+15:58:10.237 DEBUG: csharp security sensor: Time spent was 00:00:00.525
+15:58:10.238 INFO: csharp security sensor: Begin: 2025-10-22T13:58:09.711905300Z, End: 2025-10-22T13:58:10.237426Z, Duration: 00:00:00.525
+  Load type hierarchy and UCFGs: Begin: 2025-10-22T13:58:09.712908500Z, End: 2025-10-22T13:58:09.781235200Z, Duration: 00:00:00.068
+    Load type hierarchy: Begin: 2025-10-22T13:58:09.712908500Z, End: 2025-10-22T13:58:09.737767200Z, Duration: 00:00:00.024
+    Load UCFGs: Begin: 2025-10-22T13:58:09.737767200Z, End: 2025-10-22T13:58:09.780159200Z, Duration: 00:00:00.042
+  Check cache: Begin: 2025-10-22T13:58:09.781235200Z, End: 2025-10-22T13:58:09.781235200Z, Duration: 00:00:00.000
+    Load cache: Begin: 2025-10-22T13:58:09.781235200Z, End: 2025-10-22T13:58:09.781235200Z, Duration: 00:00:00.000
+  Create runtime call graph: Begin: 2025-10-22T13:58:09.781235200Z, End: 2025-10-22T13:58:09.786230100Z, Duration: 00:00:00.004
+    Variable Type Analysis #1: Begin: 2025-10-22T13:58:09.782229500Z, End: 2025-10-22T13:58:09.785230900Z, Duration: 00:00:00.003
+      Create runtime type propagation graph: Begin: 2025-10-22T13:58:09.782229500Z, End: 2025-10-22T13:58:09.784230600Z, Duration: 00:00:00.002
+      Run SCC (Tarjan) on 0 nodes: Begin: 2025-10-22T13:58:09.784230600Z, End: 2025-10-22T13:58:09.784230600Z, Duration: 00:00:00.000
+      Propagate runtime types to strongly connected components: Begin: 2025-10-22T13:58:09.784230600Z, End: 2025-10-22T13:58:09.785230900Z, Duration: 00:00:00.001
+    Variable Type Analysis #2: Begin: 2025-10-22T13:58:09.785230900Z, End: 2025-10-22T13:58:09.785230900Z, Duration: 00:00:00.000
+      Create runtime type propagation graph: Begin: 2025-10-22T13:58:09.785230900Z, End: 2025-10-22T13:58:09.785230900Z, Duration: 00:00:00.000
+      Run SCC (Tarjan) on 0 nodes: Begin: 2025-10-22T13:58:09.785230900Z, End: 2025-10-22T13:58:09.785230900Z, Duration: 00:00:00.000
+      Propagate runtime types to strongly connected components: Begin: 2025-10-22T13:58:09.785230900Z, End: 2025-10-22T13:58:09.785230900Z, Duration: 00:00:00.000
+  Load config: Begin: 2025-10-22T13:58:09.786230100Z, End: 2025-10-22T13:58:10.223914500Z, Duration: 00:00:00.437
+  Compute entry points: Begin: 2025-10-22T13:58:10.223914500Z, End: 2025-10-22T13:58:10.236918500Z, Duration: 00:00:00.013
+15:58:10.238 INFO: csharp security sensor peak memory: 254 MB
+15:58:10.238 DEBUG: Debug information:
+15:58:10.238 INFO: Sensor CSharpSecuritySensor [security] (done) | time=527ms
+15:58:10.238 INFO: Sensor VbNetSecuritySensor [security]
+15:58:10.239 INFO: 25 taint analysis rules enabled.
+15:58:10.239 DEBUG: Enabled taint analysis rules: S2076, S2078, S2083, S2091, S2631, S3649, S5135, S5144, S5145, S5146, S5147, S5334, S5883, S6096, S6173, S6287, S6350, S6399, S6547, S6549, S6639, S6641, S6680, S6776, S7044
+15:58:10.239 DEBUG: Load type hierarchy and UCFGs: Starting
+15:58:10.239 DEBUG: Load type hierarchy: Starting
+15:58:10.239 DEBUG: Reading type hierarchy from: C:\Users\michal\source\repos\ConsoleApp96\.sonarqube\out\ucfg2\vbnet
+15:58:10.239 DEBUG: Read 0 type definitions
+15:58:10.239 DEBUG: Load type hierarchy: Time spent was 00:00:00.000
+15:58:10.239 DEBUG: Load UCFGs: Starting
+15:58:10.239 DEBUG: Reading UCFGs from: C:\Users\michal\source\repos\ConsoleApp96\.sonarqube\out\ucfg2\vbnet
+15:58:10.239 DEBUG: UCFG directory does not exist, no UCFGs will be loaded.
+15:58:10.239 DEBUG: Load UCFGs: Time spent was 00:00:00.000
+15:58:10.239 DEBUG: Load type hierarchy and UCFGs: Time spent was 00:00:00.000
+15:58:10.239 INFO: No UCFGs have been included for analysis.
+15:58:10.239 DEBUG: vbnet security sensor: Time spent was 00:00:00.000
+15:58:10.240 INFO: vbnet security sensor: Begin: 2025-10-22T13:58:10.238435Z, End: 2025-10-22T13:58:10.239432500Z, Duration: 00:00:00.000
+  Load type hierarchy and UCFGs: Begin: 2025-10-22T13:58:10.239432500Z, End: 2025-10-22T13:58:10.239432500Z, Duration: 00:00:00.000
+    Load type hierarchy: Begin: 2025-10-22T13:58:10.239432500Z, End: 2025-10-22T13:58:10.239432500Z, Duration: 00:00:00.000
+    Load UCFGs: Begin: 2025-10-22T13:58:10.239432500Z, End: 2025-10-22T13:58:10.239432500Z, Duration: 00:00:00.000
+15:58:10.240 INFO: vbnet security sensor peak memory: 254 MB
+15:58:10.240 DEBUG: Debug information:
+15:58:10.240 INFO: Sensor VbNetSecuritySensor [security] (done) | time=2ms
+15:58:10.240 INFO: Sensor PhpSecuritySensor [security]
+15:58:10.240 INFO: No taint analysis rules have been enabled, will not execute taint analysis.
+15:58:10.241 DEBUG: php security sensor: Time spent was 00:00:00.001
+15:58:10.241 INFO: php security sensor: Begin: 2025-10-22T13:58:10.240434400Z, End: 2025-10-22T13:58:10.241438Z, Duration: 00:00:00.001
+15:58:10.241 INFO: php security sensor peak memory: 254 MB
+15:58:10.241 DEBUG: Debug information:
+15:58:10.241 INFO: Sensor PhpSecuritySensor [security] (done) | time=1ms
+15:58:10.241 INFO: Sensor PythonSecuritySensor [security]
+15:58:10.242 INFO: 21 taint analysis rules enabled.
+15:58:10.242 DEBUG: Enabled taint analysis rules: S2076, S2078, S2083, S2091, S2631, S3649, S5131, S5135, S5144, S5145, S5146, S5147, S5334, S5496, S6287, S6350, S6639, S6680, S6776, S6839, S7044
+15:58:10.242 DEBUG: Load type hierarchy and UCFGs: Starting
+15:58:10.242 DEBUG: Load type hierarchy: Starting
+15:58:10.242 DEBUG: Reading type hierarchy from: C:\Users\michal\source\repos\ConsoleApp96\.sonarqube\out\.sonar\ucfg2\python
+15:58:10.242 DEBUG: Read 0 type definitions
+15:58:10.242 DEBUG: Load type hierarchy: Time spent was 00:00:00.000
+15:58:10.242 DEBUG: Load UCFGs: Starting
+15:58:10.242 DEBUG: Reading UCFGs from: C:\Users\michal\source\repos\ConsoleApp96\.sonarqube\out\.sonar\ucfg2\python
+15:58:10.242 DEBUG: UCFG directory does not exist, no UCFGs will be loaded.
+15:58:10.242 DEBUG: Load UCFGs: Time spent was 00:00:00.000
+15:58:10.242 DEBUG: Load type hierarchy and UCFGs: Time spent was 00:00:00.000
+15:58:10.242 INFO: No UCFGs have been included for analysis.
+15:58:10.242 DEBUG: python security sensor: Time spent was 00:00:00.000
+15:58:10.243 INFO: python security sensor: Begin: 2025-10-22T13:58:10.241438Z, End: 2025-10-22T13:58:10.242435200Z, Duration: 00:00:00.000
+  Load type hierarchy and UCFGs: Begin: 2025-10-22T13:58:10.242435200Z, End: 2025-10-22T13:58:10.242435200Z, Duration: 00:00:00.000
+    Load type hierarchy: Begin: 2025-10-22T13:58:10.242435200Z, End: 2025-10-22T13:58:10.242435200Z, Duration: 00:00:00.000
+    Load UCFGs: Begin: 2025-10-22T13:58:10.242435200Z, End: 2025-10-22T13:58:10.242435200Z, Duration: 00:00:00.000
+15:58:10.243 INFO: python security sensor peak memory: 254 MB
+15:58:10.243 DEBUG: Debug information:
+15:58:10.243 INFO: Sensor PythonSecuritySensor [security] (done) | time=2ms
+15:58:10.243 INFO: Sensor JsSecuritySensor [security]
+15:58:10.244 DEBUG: SonarJasmin not installed. Using SonarSecurity for JS/TS taint rules.
+15:58:10.245 INFO: 15 taint analysis rules enabled.
+15:58:10.245 DEBUG: Enabled taint analysis rules: S2076, S2083, S2631, S3649, S5131, S5144, S5146, S5147, S5334, S5696, S5883, S6096, S6105, S6287, S6350
+15:58:10.245 DEBUG: Load type hierarchy and UCFGs: Starting
+15:58:10.245 DEBUG: Load type hierarchy: Starting
+15:58:10.248 DEBUG: Reading type hierarchy from: C:\Users\michal\source\repos\ConsoleApp96\.sonarqube\out\.sonar\ucfg2\js
+15:58:10.249 DEBUG: Read 0 type definitions
+15:58:10.249 DEBUG: Load type hierarchy: Time spent was 00:00:00.003
+15:58:10.249 DEBUG: Load UCFGs: Starting
+15:58:10.249 DEBUG: Reading UCFGs from: C:\Users\michal\source\repos\ConsoleApp96\.sonarqube\out\.sonar\ucfg2\js
+15:58:10.249 DEBUG: UCFG directory does not exist, no UCFGs will be loaded.
+15:58:10.249 DEBUG: Load UCFGs: Time spent was 00:00:00.000
+15:58:10.249 DEBUG: Load type hierarchy and UCFGs: Time spent was 00:00:00.003
+15:58:10.249 INFO: No UCFGs have been included for analysis.
+15:58:10.250 DEBUG: js security sensor: Time spent was 00:00:00.005
+15:58:10.250 INFO: js security sensor: Begin: 2025-10-22T13:58:10.244435Z, End: 2025-10-22T13:58:10.250434800Z, Duration: 00:00:00.005
+  Load type hierarchy and UCFGs: Begin: 2025-10-22T13:58:10.245436Z, End: 2025-10-22T13:58:10.249435Z, Duration: 00:00:00.003
+    Load type hierarchy: Begin: 2025-10-22T13:58:10.245436Z, End: 2025-10-22T13:58:10.249435Z, Duration: 00:00:00.003
+    Load UCFGs: Begin: 2025-10-22T13:58:10.249435Z, End: 2025-10-22T13:58:10.249435Z, Duration: 00:00:00.000
+15:58:10.252 INFO: js security sensor peak memory: 254 MB
+15:58:10.252 DEBUG: Debug information:
+15:58:10.252 INFO: Sensor JsSecuritySensor [security] (done) | time=9ms
+15:58:10.252 INFO: Sensor KotlinSecuritySensor [security]
+15:58:10.253 INFO: 28 taint analysis rules enabled.
+15:58:10.253 DEBUG: Enabled taint analysis rules: S2076, S2078, S2083, S2091, S2631, S3649, S5131, S5135, S5144, S5145, S5146, S5147, S5334, S5496, S5883, S6096, S6173, S6287, S6350, S6384, S6390, S6398, S6399, S6547, S6549, S7044, S7606, S7610
+15:58:10.253 DEBUG: Load type hierarchy and UCFGs: Starting
+15:58:10.253 DEBUG: Load type hierarchy: Starting
+15:58:10.253 DEBUG: Reading type hierarchy from: C:\Users\michal\source\repos\ConsoleApp96\.sonarqube\out\.sonar\ucfg2\kotlin
+15:58:10.253 DEBUG: Read 0 type definitions
+15:58:10.254 DEBUG: Load type hierarchy: Time spent was 00:00:00.000
+15:58:10.256 DEBUG: Load UCFGs: Starting
+15:58:10.256 DEBUG: Reading UCFGs from: C:\Users\michal\source\repos\ConsoleApp96\.sonarqube\out\.sonar\ucfg2\kotlin
+15:58:10.256 DEBUG: UCFG directory does not exist, no UCFGs will be loaded.
+15:58:10.256 DEBUG: Load UCFGs: Time spent was 00:00:00.000
+15:58:10.256 DEBUG: Load type hierarchy and UCFGs: Time spent was 00:00:00.002
+15:58:10.256 INFO: No UCFGs have been included for analysis.
+15:58:10.256 DEBUG: kotlin security sensor: Time spent was 00:00:00.002
+15:58:10.256 INFO: kotlin security sensor: Begin: 2025-10-22T13:58:10.253434600Z, End: 2025-10-22T13:58:10.256433500Z, Duration: 00:00:00.002
+  Load type hierarchy and UCFGs: Begin: 2025-10-22T13:58:10.253434600Z, End: 2025-10-22T13:58:10.256433500Z, Duration: 00:00:00.002
+    Load type hierarchy: Begin: 2025-10-22T13:58:10.253434600Z, End: 2025-10-22T13:58:10.253434600Z, Duration: 00:00:00.000
+    Load UCFGs: Begin: 2025-10-22T13:58:10.256433500Z, End: 2025-10-22T13:58:10.256433500Z, Duration: 00:00:00.000
+15:58:10.259 INFO: kotlin security sensor peak memory: 254 MB
+15:58:10.259 DEBUG: Debug information:
+15:58:10.259 INFO: Sensor KotlinSecuritySensor [security] (done) | time=7ms
+15:58:10.259 INFO: Sensor GoSecuritySensor [security]
+15:58:10.260 INFO: 9 taint analysis rules enabled.
+15:58:10.260 DEBUG: Enabled taint analysis rules: S2076, S2083, S2091, S3649, S5144, S5145, S5146, S6096, S6350
+15:58:10.260 DEBUG: Load type hierarchy and UCFGs: Starting
+15:58:10.260 DEBUG: Load type hierarchy: Starting
+15:58:10.260 DEBUG: Reading type hierarchy from: C:\Users\michal\source\repos\ConsoleApp96\.sonarqube\out\.sonar\ucfg2\go
+15:58:10.260 DEBUG: Read 0 type definitions
+15:58:10.261 DEBUG: Load type hierarchy: Time spent was 00:00:00.000
+15:58:10.261 DEBUG: Load UCFGs: Starting
+15:58:10.261 DEBUG: Reading UCFGs from: C:\Users\michal\source\repos\ConsoleApp96\.sonarqube\out\.sonar\ucfg2\go
+15:58:10.261 DEBUG: UCFG directory does not exist, no UCFGs will be loaded.
+15:58:10.264 DEBUG: Load UCFGs: Time spent was 00:00:00.003
+15:58:10.264 DEBUG: Load type hierarchy and UCFGs: Time spent was 00:00:00.003
+15:58:10.264 INFO: No UCFGs have been included for analysis.
+15:58:10.265 DEBUG: go security sensor: Time spent was 00:00:00.004
+15:58:10.265 INFO: go security sensor: Begin: 2025-10-22T13:58:10.260433400Z, End: 2025-10-22T13:58:10.265270300Z, Duration: 00:00:00.004
+  Load type hierarchy and UCFGs: Begin: 2025-10-22T13:58:10.260433400Z, End: 2025-10-22T13:58:10.264084300Z, Duration: 00:00:00.003
+    Load type hierarchy: Begin: 2025-10-22T13:58:10.260433400Z, End: 2025-10-22T13:58:10.260433400Z, Duration: 00:00:00.000
+    Load UCFGs: Begin: 2025-10-22T13:58:10.261074300Z, End: 2025-10-22T13:58:10.264084300Z, Duration: 00:00:00.003
+15:58:10.265 INFO: go security sensor peak memory: 254 MB
+15:58:10.265 DEBUG: Debug information:
+15:58:10.265 INFO: Sensor GoSecuritySensor [security] (done) | time=6ms
+15:58:10.266 INFO: ------------- Run sensors on project
+15:58:10.494 DEBUG: 'C# Unit Test Results Import' skipped because of missing configuration requirements.
+Accessed configuration:
+- sonar.cs.vstest.reportsPaths: <empty>
+- sonar.cs.nunit.reportsPaths: <empty>
+- sonar.cs.dotcover.reportsPaths: <empty>
+- sonar.cs.ncover3.reportsPaths: <empty>
+- sonar.cs.xunit.reportsPaths: <empty>
+- sonar.cs.vscoveragexml.reportsPaths: coverage.xml
+- sonar.cs.opencover.reportsPaths: <empty>
+15:58:10.494 DEBUG: 'Generic Coverage Report' skipped because of missing configuration requirements.
+Accessed configuration:
+- sonar.cs.vstest.reportsPaths: <empty>
+- sonar.cs.nunit.reportsPaths: <empty>
+- sonar.cs.dotcover.reportsPaths: <empty>
+- sonar.coverageReportPaths: <empty>
+- sonar.cs.ncover3.reportsPaths: <empty>
+- sonar.cs.xunit.reportsPaths: <empty>
+- sonar.cs.vscoveragexml.reportsPaths: coverage.xml
+- sonar.cs.opencover.reportsPaths: <empty>
+15:58:10.494 DEBUG: 'Import external issues report from SARIF file.' skipped because of missing configuration requirements.
+Accessed configuration:
+- sonar.cs.vstest.reportsPaths: <empty>
+- sonar.cs.nunit.reportsPaths: <empty>
+- sonar.cs.dotcover.reportsPaths: <empty>
+- sonar.coverageReportPaths: <empty>
+- sonar.cs.ncover3.reportsPaths: <empty>
+- sonar.cs.xunit.reportsPaths: <empty>
+- sonar.cs.vscoveragexml.reportsPaths: coverage.xml
+- sonar.sarifReportPaths: <empty>
+- sonar.cs.opencover.reportsPaths: <empty>
+15:58:10.495 DEBUG: 'JavaArchitectureSensor' skipped because there is no related file in current project
+15:58:10.495 DEBUG: 'JsArchitectureSensor' skipped because there is no related file in current project
+15:58:10.495 DEBUG: 'TsArchitectureSensor' skipped because there is no related file in current project
+15:58:10.495 DEBUG: 'PythonArchitectureSensor' skipped because there is no related file in current project
+15:58:10.495 DEBUG: 'Java CPD Block Indexer' skipped because there is no related file in current project
+15:58:10.495 DEBUG: Sensors : C# Telemetry processor -> C# Telemetry Json processor -> C# -> Analysis Warnings import -> C# File Caching Sensor -> C# Tests Coverage Report Import -> CSharpArchitectureSensor -> Zero Coverage Sensor
+15:58:10.496 INFO: Sensor C# Telemetry processor [csharpenterprise]
+15:58:10.497 DEBUG: Found 1 telemetry messages reported by the analyzers.
+15:58:10.500 DEBUG: Aggregated 1 metrics.
+15:58:10.500 DEBUG: Adding metric: csharpenterprise.cs.language_version.csharp7_3=1
+15:58:10.500 DEBUG: Added 1 metrics.
+15:58:10.500 INFO: Sensor C# Telemetry processor [csharpenterprise] (done) | time=4ms
+15:58:10.500 INFO: Sensor C# Telemetry Json processor [csharpenterprise]
+15:58:10.501 DEBUG: Searching for telemetry json in C:\Users\michal\source\repos\ConsoleApp96\.sonarqube\out
+15:58:10.510 DEBUG: Found 8 telemetry messages.
+15:58:10.515 DEBUG: Adding metric: dotnetenterprise.s4net.params.sonar_cs_vscoveragexml_reportspaths.source=CLI
+15:58:10.515 DEBUG: Adding metric: dotnetenterprise.s4net.params.sonar_cs_vscoveragexml_reportspaths.value=relative
+15:58:10.515 DEBUG: Adding metric: dotnetenterprise.s4net.params.sonar_verbose.source=CLI
+15:58:10.515 DEBUG: Adding metric: dotnetenterprise.s4net.serverInfo.product=SQ_Server
+15:58:10.515 DEBUG: Adding metric: dotnetenterprise.s4net.serverInfo.serverUrl=custom_url
+15:58:10.515 DEBUG: Adding metric: dotnetenterprise.s4net.build.visual_studio_version=17.0
+15:58:10.515 DEBUG: Adding metric: dotnetenterprise.s4net.build.msbuild_version=17.12.7
+15:58:10.515 DEBUG: Adding metric: dotnetenterprise.s4net.build.target_framework_moniker._netframework_version_v4_7_2=1
+15:58:10.515 DEBUG: Added 8 metrics.
+15:58:10.515 INFO: Sensor C# Telemetry Json processor [csharpenterprise] (done) | time=15ms
+15:58:10.515 INFO: Sensor C# [csharpenterprise]
+15:58:10.527 INFO: Importing results from 8 proto files in 'C:\Users\michal\source\repos\ConsoleApp96\.sonarqube\out\0\output-cs'
+15:58:10.672 DEBUG: Not enough content in 'ConsoleApp96/Program.cs' to have CPD blocks, it will not be part of the duplication detection
+15:58:10.687 INFO: Importing 1 Roslyn report
+15:58:10.687 DEBUG: Processing Roslyn report: C:\Users\michal\source\repos\ConsoleApp96\.sonarqube\out\0\Issues.json
+15:58:10.704 DEBUG: Adding normal issue S2068: C:\Users\michal\source\repos\ConsoleApp96\ConsoleApp96\appsettings.json
+15:58:10.715 DEBUG: Adding normal issue S1118: C:\Users\michal\source\repos\ConsoleApp96\ConsoleApp96\Program.cs
+15:58:10.717 DEBUG: Adding normal issue S1186: C:\Users\michal\source\repos\ConsoleApp96\ConsoleApp96\Program.cs
+15:58:10.719 INFO: Found 1 MSBuild C# project: 1 MAIN project.
+15:58:10.719 INFO: Sensor C# [csharpenterprise] (done) | time=204ms
+15:58:10.719 INFO: Sensor Analysis Warnings import [csharpenterprise]
+15:58:10.719 DEBUG: Searching for analysis warnings in C:\Users\michal\source\repos\ConsoleApp96\.sonarqube\out
+15:58:10.722 INFO: Sensor Analysis Warnings import [csharpenterprise] (done) | time=3ms
+15:58:10.722 INFO: Sensor C# File Caching Sensor [csharpenterprise]
+15:58:10.722 DEBUG: Incremental PR analysis: Preparing to upload file hashes.
+15:58:10.722 DEBUG: Incremental PR analysis: basePathUri: file:///C:/Users/michal/source/repos/ConsoleApp96/
+15:58:10.723 DEBUG: Incremental PR analysis: Adding hash for 'ConsoleApp96/Properties/AssemblyInfo.cs' to the cache.
+15:58:10.726 DEBUG: Incremental PR analysis: Adding hash for 'ConsoleApp96/Program.cs' to the cache.
+15:58:10.726 INFO: Sensor C# File Caching Sensor [csharpenterprise] (done) | time=4ms
+15:58:10.726 INFO: Sensor C# Tests Coverage Report Import [csharpenterprise]
+15:58:10.727 DEBUG: Analyzing coverage with wildcardPatternFileProvider with base dir 'C:\Users\michal\source\repos\ConsoleApp96\.' and file separator '\'.
+15:58:10.727 DEBUG: Pattern matcher extracted prefix/absolute path 'C:\Users\michal\source\repos\ConsoleApp96\.\coverage.xml' from the given pattern 'coverage.xml'.
+15:58:10.727 DEBUG: Pattern matcher returns a single file: 'C:\Users\michal\source\repos\ConsoleApp96\.\coverage.xml'.
+15:58:10.727 DEBUG: The current user dir is 'C:\Users\michal\source\repos\ConsoleApp96'.
+15:58:10.727 INFO: Parsing the Visual Studio coverage XML report C:\Users\michal\source\repos\ConsoleApp96\.\coverage.xml
+15:58:10.751 INFO: Adding this code coverage report to the cache for later reuse: C:\Users\michal\source\repos\ConsoleApp96\.\coverage.xml
+15:58:10.751 DEBUG: Analyzing coverage after aggregate found '0' coverage files.
+15:58:10.751 DEBUG: The total number of file count statistics is '0'.
+15:58:10.751 INFO: Sensor C# Tests Coverage Report Import [csharpenterprise] (done) | time=25ms
+15:58:10.751 INFO: Sensor CSharpArchitectureSensor [architecture]
+15:58:10.761 INFO: Sensor CSharpArchitectureSensor [architecture] (done) | time=10ms
+15:58:10.761 INFO: Sensor Zero Coverage Sensor
+15:58:10.762 INFO: Sensor Zero Coverage Sensor (done) | time=1ms
+15:58:10.762 INFO: ------------- Gather SCA dependencies on project
+15:58:10.767 INFO: Checking for latest CLI
+15:58:10.771 INFO: Requesting CLI for OS windows and arch amd64
+15:58:10.771 DEBUG: --> GET http://l:20255/api/v2/sca/clis?os=windows&arch=amd64
+15:58:10.868 DEBUG: <-- 200 http://l:20255/api/v2/sca/clis?os=windows&arch=amd64 (96ms, unknown-length body)
+15:58:10.870 INFO: Collecting manifests for the dependency analysis...
+15:58:10.874 INFO: Setting CLI to debug mode
+15:58:10.877 INFO: Running command: [C:\Users\michal\.sonar\cache\77ae854d5bc1a4fc9b6895b8634cab1e7a2ed0df11aaf8a837ee49c454c2524e\tidelift.exe, projects, save-lockfiles, --xz, --xz-filename, C:\Users\michal\source\repos\ConsoleApp96\.sonarqube\out\.sonar\dependency-files.tar.xz, --directory, C:\Users\michal\source\repos\ConsoleApp96, --recursive, --exclude, coverage.xml,.sonarqube\out\.sonar/**, --debug]
+15:58:10.877 INFO: Environment properties: {TIDELIFT_ALLOW_MANIFEST_FAILURES=1, TIDELIFT_CLI_INSIDE_SCANNER_ENGINE=1, TIDELIFT_FEATURE_ENABLED=true, TIDELIFT_SKIP_UPDATE_CHECK=1, TIDELIFT_CLI_SQ_SERVER_VERSION=2025.5.0.113872}
+15:58:11.021 INFO: Adding default excluded manifests
+15:58:11.021 INFO: Adding default excluded manifests
+15:58:11.021 INFO: Configuration: {"APIKey":"","AllowManifestFailures":"1","Catalog":"","Certifi":"","CustomSSLCertBundle":"","Debug":"true","DefaultExclusions":"true","Directory":"C:\\Users\\michal\\source\\repos\\ConsoleApp96","EmailAddress":"","ExcludedManifestPaths":"[coverage.xml .sonarqube\\out\\.sonar/** **/node_modules/** **/bower_components/** **/dist/** **/vendor/** **/tmp/** **/temp/** **/testdata/**]","FollowSymlinks":"false","GolangNoResolve":"","GradleConfigurationPattern":"","GradleNoResolve":"","Host":"https://api.tidelift.com","Keychain User":"tidelift-cli","MavenForceDepPlugin":"","MavenIgnoreWrapper":"","MavenNoResolve":"","MavenOptions":"","NoTrees":"false","NpmEnableScripts":"","NpmNoResolve":"","NugetNoResolve":"","Organization":"","PrintJSON":"false","Project":"","PythonBinary":"","PythonNoResolve":"","PythonResolveLocal":"","RecursiveManifestSearch":"true","ResolveAsRoot":"false","Timeout":"30","Tmpdir":"","Version":"1.16.35-build-11063"}
+15:58:11.021 INFO: Skipping update check by request
+15:58:11.021 INFO: Getting Filenames
+15:58:11.027 INFO: Including file ConsoleApp96/ConsoleApp96.csproj
+15:58:11.028 INFO: Found 1 file(s)
+15:58:11.028 INFO: Loading manifest and existing lock files
+15:58:11.028 INFO: Loaded 1 file(s)
+15:58:11.032 INFO: Starting Pip processor
+15:58:11.032 INFO: Pre-processing Pip
+15:58:11.032 INFO: Pre-processing Pip completed (0ms)
+15:58:11.032 INFO: Starting Poetry processor
+15:58:11.032 INFO: Pre-processing Poetry
+15:58:11.032 INFO: Pre-processing Poetry completed (0ms)
+15:58:11.032 INFO: Starting Golang processor
+15:58:11.032 INFO: Pre-processing Golang
+15:58:11.032 INFO: Pre-processing Golang completed (0ms)
+15:58:11.032 INFO: Starting Maven processor
+15:58:11.032 INFO: Pre-processing Maven
+15:58:11.032 INFO: Pre-processing Maven completed (0ms)
+15:58:11.032 INFO: Starting Gradle processor
+15:58:11.032 INFO: Pre-processing Gradle
+15:58:11.032 INFO: Pre-processing Gradle completed (0ms)
+15:58:11.032 INFO: Starting NuGet processor
+15:58:11.032 INFO: Pre-processing NuGet
+15:58:11.032 INFO: Pre-processing NuGet completed (0ms)
+15:58:11.032 INFO: Processing ConsoleApp96/ConsoleApp96.csproj
+15:58:11.032 INFO: Processing ConsoleApp96/ConsoleApp96.csproj completed (0ms)
+15:58:11.032 INFO: Starting Npm processor
+15:58:11.032 INFO: Pre-processing Npm
+15:58:11.032 INFO: Pre-processing Npm completed (0ms)
+15:58:11.032 INFO: Generated 1 additional lock file(s)
+15:58:11.032 INFO: Creating file: C:\Users\michal\source\repos\ConsoleApp96\.sonarqube\out\.sonar\dependency-files.tar.xz
+15:58:11.036 INFO:   adding ConsoleApp96/ConsoleApp96.csproj to tar (2412 bytes)
+15:58:11.038 INFO: Finished creating "C:\\Users\\michal\\source\\repos\\ConsoleApp96\\.sonarqube\\out\\.sonar\\dependency-files.tar.xz" with 1 file(s) (948 bytes)
+15:58:11.062 INFO: Generated manifests archive file: dependency-files.tar.xz
+15:58:11.062 DEBUG: Zip ready for report: C:\Users\michal\source\repos\ConsoleApp96\.sonarqube\out\.sonar\dependency-files.tar.xz
+15:58:11.073 DEBUG: Manifest zip written to report
+15:58:11.073 INFO: Load SCA project dependencies (done) | time=305ms
+15:58:11.074 INFO: SCM Publisher No SCM system was detected. You can use the 'sonar.scm.provider' property to explicitly specify it.
+15:58:11.076 INFO: CPD Executor 1 file had no CPD blocks
+15:58:11.076 INFO: CPD Executor Calculating CPD for 1 file
+15:58:11.077 DEBUG: Detection of duplications for C:/Users/michal/source/repos/ConsoleApp96/ConsoleApp96/Properties/AssemblyInfo.cs
+15:58:11.086 INFO: CPD Executor CPD calculation finished (done) | time=9ms
+15:58:11.211 INFO: Analysis report generated in 107ms, dir size=439.4 kB
+15:58:11.289 INFO: Analysis report compressed in 77ms, zip size=52.1 kB
+15:58:11.289 INFO: Analysis report generated in C:\Users\michal\source\repos\ConsoleApp96\.sonarqube\out\.sonar\scanner-report
+15:58:11.289 DEBUG: Upload report
+15:58:11.292 DEBUG: --> POST http://l:20255/api/ce/submit?projectKey=ConsoleApp96 (52381-byte body)
+15:58:11.310 DEBUG: <-- 200 http://l:20255/api/ce/submit?projectKey=ConsoleApp96 (18ms, 76-byte body)
+15:58:11.313 INFO: Analysis report uploaded in 24ms
+15:58:11.317 DEBUG: Report metadata written to C:\Users\michal\source\repos\ConsoleApp96\.sonarqube\out\.sonar\report-task.txt
+15:58:11.317 INFO: ANALYSIS SUCCESSFUL, you can find the results at: http://l:20255/dashboard?id=ConsoleApp96
+15:58:11.317 INFO: Note that you will be able to access the updated dashboard once the server has processed the submitted analysis report
+15:58:11.317 INFO: More about the report processing at http://l:20255/api/ce/task?id=8641ff0f-07ca-4a51-af89-b2f53e2194d8
+15:58:11.321 DEBUG: Post-jobs : 
+15:58:11.327 INFO: Analysis total time: 5.974 s
+15:58:11.329 INFO: ------------------------------------------------------------------------
+15:58:11.329 INFO: EXECUTION SUCCESS
+15:58:11.329 INFO: ------------------------------------------------------------------------
+15:58:11.329 INFO: Total time: 7.870s
+15:58:11.398 INFO: Final Memory: 27M/112M
+15:58:11.398 INFO: ------------------------------------------------------------------------
+15:58:11.403 DEBUG: Cleanup org.eclipse.jgit.util.FS$FileStoreAttributes$$Lambda$461/0x0000028ede2c5a68@7965a51c during JVM shutdown
+Process returned exit code 0
+The SonarScanner CLI has finished
+15:58:11.495  Post-processing succeeded.
+
+C:\Users\michal\source\repos\ConsoleApp96>rm -rf .sonarqube 
