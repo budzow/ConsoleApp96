@@ -1,9 +1,7 @@
 name: SonarQube
 on:
   push:
-    branches:
-      - main
-      - invalid_json
+    branches: [main, invalid_json, develop]
 jobs:
   build:
     name: Build and analyze
